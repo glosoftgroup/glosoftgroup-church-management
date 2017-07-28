@@ -1,0 +1,332 @@
+a:12:{s:15:"controller_name";s:7:"members";s:10:"model_name";s:7:"members";s:13:"scaffold_code";s:6468:"    "date_joined" :
+    {
+      "type"  : "datepicker",
+      "required" : "TRUE"
+    },
+   "title" :
+    {
+      "type":"select",
+      "size":"1",
+      "required" :"FALSE",
+      "option_choose_one" :"TRUE",
+      "with_translations":"FALSE",
+      "options" :
+      {
+        "0" :
+        {
+          "text" : "Spanish",
+          "selected": "TRUE",
+          "value" : "spanish"
+        },
+        "1" :
+        {
+          "text" : "English",
+          "selected": "FALSE",
+          "value" : "english"
+        }
+      }
+    },
+"first_name" :
+{
+  "type" :  "text",
+  "minlength" :  "0",
+  "maxlength"  :  "60",
+  "required"  :  "TRUE",
+  "multilanguage" :  "FALSE",
+  "is_unique"  : "FALSE"
+}
+  ,
+"last_name" :
+{
+  "type" :  "text",
+  "minlength" :  "0",
+  "maxlength"  :  "60",
+  "required"  :  "TRUE",
+  "multilanguage" :  "FALSE",
+  "is_unique"  : "FALSE"
+},
+  
+"gender" :
+{
+  "type"        : "radio",
+  "required"   : "TRUE",
+  "checked" : "male",
+  "options"     :
+  {
+    "0" :
+    {
+      "label"       : "Male",
+      "value"       : "male"
+    },
+    "1" :
+    {
+      "label"       : "Female",
+      "value"       : "female"
+    }
+  }
+},
+    "dob" :
+    {
+      "type"  : "datepicker",
+      "required" : "TRUE"
+    },
+      
+"phone1" :
+{
+  "type" :  "text",
+  "minlength" :  "0",
+  "maxlength"  :  "60",
+  "required"  :  "TRUE",
+  "multilanguage" :  "FALSE",
+  "is_unique"  : "FALSE"
+},
+"phone2" :
+{
+  "type" :  "text",
+  "minlength" :  "0",
+  "maxlength"  :  "60",
+  "required"  :  "FALSE",
+  "multilanguage" :  "FALSE",
+  "is_unique"  : "FALSE"
+},
+"email" :
+{
+  "type" :  "text",
+  "minlength" :  "0",
+  "maxlength"  :  "60",
+  "required"  :  "FALSE",
+  "multilanguage" :  "FALSE",
+  "is_unique"  : "FALSE"
+}
+   ,
+ "country" :
+    {
+      "type":"select",
+      "size":"1",
+      "required" :"TRUE",
+      "option_choose_one" :"TRUE",
+      "with_translations":"FALSE",
+      "options" :
+      {
+        "0" :
+        {
+          "text" : "Spanish",
+          "selected": "TRUE",
+          "value" : "spanish"
+        },
+        "1" :
+        {
+          "text" : "English",
+          "selected": "FALSE",
+          "value" : "english"
+        }
+      }
+    },
+   "county" :
+    {
+      "type":"select",
+      "size":"1",
+      "required" :"TRUE",
+      "option_choose_one" :"TRUE",
+      "with_translations":"FALSE",
+      "options" :
+      {
+        "0" :
+        {
+          "text" : "Spanish",
+          "selected": "TRUE",
+          "value" : "spanish"
+        },
+        "1" :
+        {
+          "text" : "English",
+          "selected": "FALSE",
+          "value" : "english"
+        }
+      }
+    },
+"location" :
+{
+  "type" :  "text",
+  "minlength" :  "0",
+  "maxlength"  :  "60",
+  "required"  :  "FALSE",
+  "multilanguage" :  "FALSE",
+  "is_unique"  : "FALSE"
+}  ,
+   "address"  :
+        {
+          "type": "textarea",
+          "minlength": "0",
+          "maxlength": "500",
+          "required" : "FALSE",
+          "multilanguage"  : "FALSE",
+          "ckeditor"  : "FALSE"
+        },
+   "marital_status" :
+    {
+      "type":"select",
+      "size":"1",
+      "required" :"TRUE",
+      "option_choose_one" :"TRUE",
+      "with_translations":"FALSE",
+      "options" :
+      {
+        "0" :
+        {
+          "text" : "Spanish",
+          "selected": "TRUE",
+          "value" : "spanish"
+        },
+        "1" :
+        {
+          "text" : "English",
+          "selected": "FALSE",
+          "value" : "english"
+        }
+      }
+    },
+   
+  "member_status" :
+    {
+      "type":"select",
+      "size":"1",
+      "required" :"TRUE",
+      "option_choose_one" :"TRUE",
+      "with_translations":"FALSE",
+      "options" :
+      {
+        "0" :
+        {
+          "text" : "Spanish",
+          "selected": "TRUE",
+          "value" : "spanish"
+        },
+        "1" :
+        {
+          "text" : "English",
+          "selected": "FALSE",
+          "value" : "english"
+        }
+      }
+    },           
+    "passport" :
+    {
+      "type"                 : "file",
+      "required"           : "FALSE",
+      "multilanguage"   : "FALSE",
+      "upload"  :
+      {
+        "allowed_types"  : "pdf",
+        "encrypt_name"  : "TRUE",
+        "max_size"         : "2048"
+      }
+    },
+    "occupation" :
+    {
+      "type":"select",
+      "size":"1",
+      "required" :"FALSE",
+      "option_choose_one" :"TRUE",
+      "with_translations":"FALSE",
+      "options" :
+      {
+        "0" :
+        {
+          "text" : "Spanish",
+          "selected": "TRUE",
+          "value" : "spanish"
+        },
+        "1" :
+        {
+          "text" : "English",
+          "selected": "FALSE",
+          "value" : "english"
+        }
+      }
+    }, 
+ "employer" :
+{
+  "type" :  "text",
+  "minlength" :  "0",
+  "maxlength"  :  "60",
+  "required"  :  "FALSE",
+  "multilanguage" :  "FALSE",
+  "is_unique"  : "FALSE"
+} ,
+
+   "how_joined" :
+    {
+      "type":"select",
+      "size":"1",
+      "required" :"TRUE",
+      "option_choose_one" :"TRUE",
+      "with_translations":"FALSE",
+      "options" :
+      {
+        "0" :
+        {
+          "text" : "Spanish",
+          "selected": "TRUE",
+          "value" : "spanish"
+        },
+        "1" :
+        {
+          "text" : "English",
+          "selected": "FALSE",
+          "value" : "english"
+        }
+      }
+    },
+ "baptised" :
+{
+  "type"        : "radio",
+  "required"   : "TRUE",
+  "checked" : "male",
+  "options"     :
+  {
+    "0" :
+    {
+      "label"       : "Male",
+      "value"       : "male"
+    },
+    "1" :
+    {
+      "label"       : "Female",
+      "value"       : "female"
+    }
+  }
+}  ,
+
+"confirmed" :
+{
+  "type"        : "radio",
+  "required"   : "TRUE",
+  "checked" : "male",
+  "options"     :
+  {
+    "0" :
+    {
+      "label"       : "Male",
+      "value"       : "male"
+    },
+    "1" :
+    {
+      "label"       : "Female",
+      "value"       : "female"
+    }
+  }
+},
+
+   "Description"  :
+        {
+          "type": "textarea",
+          "minlength": "0",
+          "maxlength": "500",
+          "required" : "FALSE",
+          "multilanguage"  : "FALSE",
+          "ckeditor"  : "FALSE"
+        }
+                 
+
+       ";s:18:"scaffold_delete_bd";s:1:"1";s:11:"scaffold_bd";s:1:"1";s:15:"scaffold_routes";b:0;s:13:"scaffold_menu";b:0;s:17:"create_controller";s:1:"1";s:12:"create_model";s:1:"1";s:18:"create_view_create";s:1:"1";s:16:"create_view_list";s:1:"1";s:19:"scaffold_model_type";s:12:"activerecord";}

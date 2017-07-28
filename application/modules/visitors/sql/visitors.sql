@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS  visitors (
+	id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	visit_date  INT(11), 
+	first_name  varchar(256)  DEFAULT '' NOT NULL, 
+	last_name  varchar(256)  DEFAULT '' NOT NULL, 
+	gender  varchar(256)  DEFAULT '' NOT NULL, 
+	phone  varchar(256)  DEFAULT '' NOT NULL, 
+	email  varchar(256)  DEFAULT '' NOT NULL, 
+	county  varchar(256)  DEFAULT '' NOT NULL, 
+	location  varchar(256)  DEFAULT '' NOT NULL, 
+	directed_by  varchar(256)  DEFAULT '' NOT NULL, 
+	interested_in_membership INT(1) NOT NULL, 
+	saved INT(1) NOT NULL, 
+	baptised INT(1) NOT NULL, 
+	know_more INT(1) NOT NULL, 
+	ministries_interest INT(1) NOT NULL, 
+	come_back INT(1) NOT NULL, 
+	additionals  text  , 
+	created_by INT(11), 
+	modified_by INT(11), 
+	created_on INT(11) , 
+	modified_on INT(11) 
+	) ENGINE=InnoDB  DEFAULT CHARSET=utf8;

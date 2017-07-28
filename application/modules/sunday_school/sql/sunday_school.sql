@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS  sunday_school (
+	id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	date_joined  INT(11), 
+	first_name  varchar(256)  DEFAULT '' NOT NULL, 
+	last_name  varchar(256)  DEFAULT '' NOT NULL, 
+	dob  INT(11), 
+	type  INT(11), 
+	parent_id  INT(11), 
+	gender  varchar(256)  DEFAULT '' NOT NULL, 
+	relationship  varchar(256)  DEFAULT '' NOT NULL, 
+	special_interest  text  , 
+	strengths  text  , 
+	weaknesses  text  , 
+	health  text  , 
+	passport  varchar(256)  DEFAULT '' NOT NULL, 
+	additionals  text  , 
+	created_by INT(11), 
+	modified_by INT(11), 
+	created_on INT(11) , 
+	modified_on INT(11) 
+	) ENGINE=InnoDB  DEFAULT CHARSET=utf8;

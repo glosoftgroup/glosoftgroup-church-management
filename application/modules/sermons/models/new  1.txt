@@ -1,0 +1,264 @@
+  "service_date" :
+    {
+      "type"		: "datepicker",
+      "required"	: "TRUE"
+    },
+"title" :
+{
+  "type" :  "text",
+  "minlength"	:  "0",
+  "maxlength"	 :  "60",
+  "required"  :  "TRUE",
+  "multilanguage"	:  "FALSE",
+  "is_unique"  : "FALSE"
+},
+"service_leader" :
+{
+  "type" :  "text",
+  "minlength"	:  "0",
+  "maxlength"	 :  "60",
+  "required"  :  "TRUE",
+  "multilanguage"	:  "FALSE",
+  "is_unique"  : "FALSE"
+},
+"first_service" :
+{
+  "type" :  "text",
+  "minlength"	:  "0",
+  "maxlength"	 :  "60",
+  "required"  :  "TRUE",
+  "multilanguage"	:  "FALSE",
+  "is_unique"  : "FALSE"
+},
+"second_service" :
+{
+  "type" :  "text",
+  "minlength"	:  "0",
+  "maxlength"	 :  "60",
+  "required"  :  "FALSE",
+  "multilanguage"	:  "FALSE",
+  "is_unique"  : "FALSE"
+},
+   "pastor_on_duty" :
+    {
+      "type":"select",
+      "size":"1",
+      "required"	:"TRUE",
+      "option_choose_one"	:"TRUE",
+      "with_translations":"FALSE",
+      "options" :
+      {
+        "0" :
+        {
+          "text"	: "Spanish",
+          "selected": "TRUE",
+          "value"	: "spanish"
+        },
+        "1" :
+        {
+          "text"	: "English",
+          "selected": "FALSE",
+          "value"	: "english"
+        }
+      }
+    },
+       "sermon_theme" 	:
+        {
+          "type": "textarea",
+          "minlength": "0",
+          "maxlength": "500",
+          "required"	: "TRUE",
+          "multilanguage"  : "FALSE",
+          "ckeditor"	 : "FALSE"
+        },
+ "description" 	:
+        {
+          "type": "textarea",
+          "minlength": "0",
+          "maxlength": "500",
+          "required"	: "FALSE",
+          "multilanguage"  : "FALSE",
+          "ckeditor"	 : "FALSE"
+        },
+"upload_sermon" :
+    {
+      "type"                 : "file",
+      "required"           : "FALSE",
+      "multilanguage"   : "FALSE",
+      "upload"  :
+      {
+        "allowed_types"  : "pdf",
+        "encrypt_name"  : "TRUE",
+        "max_size"         : "2048"
+      }
+    }
+       
+	   _______________________________
+	     "service_date" :
+    {
+      "type"		: "datepicker",
+      "required"	: "TRUE"
+    },
+"title" :
+{
+  "type" :  "text",
+  "minlength"	:  "0",
+  "maxlength"	 :  "60",
+  "required"  :  "TRUE",
+  "multilanguage"	:  "FALSE",
+  "is_unique"  : "FALSE"
+},
+"host" :
+{
+  "type" :  "text",
+  "minlength"	:  "0",
+  "maxlength"	 :  "60",
+  "required"  :  "TRUE",
+  "multilanguage"	:  "FALSE",
+  "is_unique"  : "FALSE"
+},
+"estate" :
+{
+  "type" :  "text",
+  "minlength"	:  "0",
+  "maxlength"	 :  "60",
+  "required"  :  "TRUE",
+  "multilanguage"	:  "FALSE",
+  "is_unique"  : "FALSE"
+},
+"house_number" :
+{
+  "type" :  "text",
+  "minlength"	:  "0",
+  "maxlength"	 :  "60",
+  "required"  :  "TRUE",
+  "multilanguage"	:  "FALSE",
+  "is_unique"  : "FALSE"
+},
+"service_leader" :
+{
+  "type" :  "text",
+  "minlength"	:  "0",
+  "maxlength"	 :  "60",
+  "required"  :  "TRUE",
+  "multilanguage"	:  "FALSE",
+  "is_unique"  : "FALSE"
+},
+"preacher" :
+{
+  "type" :  "text",
+  "minlength"	:  "0",
+  "maxlength"	 :  "60",
+  "required"  :  "TRUE",
+  "multilanguage"	:  "FALSE",
+  "is_unique"  : "FALSE"
+},
+ "brief_description" 	:
+        {
+          "type": "textarea",
+          "minlength": "0",
+          "maxlength": "500",
+          "required"	: "FALSE",
+          "multilanguage"  : "FALSE",
+          "ckeditor"	 : "FALSE"
+        }
+      
+	  
+	  "title" :
+{
+  "type" :  "text",
+  "minlength"	:  "0",
+  "maxlength"	 :  "60",
+  "required"  :  "TRUE",
+  "multilanguage"	:  "FALSE",
+  "is_unique"  : "FALSE"
+},
+   "status" :
+    {
+      "type":"select",
+      "size":"1",
+      "required"	:"FALSE",
+      "option_choose_one"	:"TRUE",
+      "with_translations":"FALSE",
+      "options" :
+      {
+        "0" :
+        {
+          "text"	: "Spanish",
+          "selected": "TRUE",
+          "value"	: "spanish"
+        },
+        "1" :
+        {
+          "text"	: "English",
+          "selected": "FALSE",
+          "value"	: "english"
+        }
+      }
+    },
+  "content" 	:
+        {
+          "type": "textarea",
+          "minlength": "0",
+          "maxlength": "500",
+          "required"	: "TRUE",
+          "multilanguage"  : "FALSE",
+          "ckeditor"	 : "FALSE"
+        }
+      
+  
+  "title" :
+{
+  "type" :  "text",
+  "minlength" :  "0",
+  "maxlength"  :  "60",
+  "required"  :  "TRUE",
+  "multilanguage" :  "FALSE",
+  "is_unique"  : "FALSE"
+},
+   "status" :
+    {
+      "type":"select",
+      "size":"1",
+      "required" :"FALSE",
+      "option_choose_one" :"TRUE",
+      "with_translations":"FALSE",
+      "options" :
+      {
+        "0" :
+        {
+          "text" : "Live",
+          "selected": "TRUE",
+          "value" : "1"
+        },
+        "1" :
+        {
+          "text" : "Draft",
+          "selected": "FALSE",
+          "value" : "2"
+        }
+      }
+    },
+ "brief_description"  :
+        {
+          "type": "textarea",
+          "minlength": "0",
+          "maxlength": "500",
+          "required" : "FALSE",
+          "multilanguage"  : "FALSE",
+          "ckeditor"  : "FALSE"
+        },
+"upload_announcements" :
+    {
+      "type"                 : "file",
+      "required"           : "FALSE",
+      "multilanguage"   : "FALSE",
+      "upload"  :
+      {
+        "allowed_types"  : "pdf",
+        "encrypt_name"  : "TRUE",
+        "max_size"         : "2048"
+      }
+    }
+  
+  
