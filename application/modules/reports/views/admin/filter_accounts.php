@@ -1,5 +1,5 @@
 <div class="col-sm-12">
-    <div class="panel panel-default"> 
+    <div class="panel panel-default animated fadeIn"> 
         <div class="panel-heading">
             <i class="icon-external-link-sign"></i>
             <h3 class="panel-title">Reports For <?php echo ucwords($table) . ' - (' . date('Y') . ')'; ?> </h3>
@@ -69,7 +69,7 @@
 
                         </div>
                         <div class="clearfix"></div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-default animated fadeIn">
 
                             <div class="panel-body">
 

@@ -55,7 +55,7 @@
      <?php $attributes = array('class' => 'smart-wizard form-horizontal', 'id' => 'form');
          echo form_open_multipart(current_url(), $attributes);
      ?>
-    <div class="panel panel-default"> 
+    <div class="panel panel-default animated fadeIn"> 
         <div class="panel-heading">
             <i class="icon-external-link-sign"></i>
             <h3 class="panel-title"><?php echo ($updType == 'edit') ? 'Edit ' : 'Add '; ?> Sunday School Child </h3>
@@ -166,7 +166,7 @@
                                              "Female" => "Female",
                                              "Transgender" => "Transgender",
                                      );
-                                     echo form_dropdown('gender', $items, (isset($result->gender)) ? $result->gender : '', ' id="gender_1" class="form-control search-select" data-placeholder="Select Options..." ');
+                                     echo form_dropdown('gender', $items, (isset($result->gender)) ? $result->gender : '', ' id="gender_1" class="form-control select" data-placeholder="Select Options..." ');
                                  ?> <i style="color:red"><?php echo form_error('gender'); ?></i>
                             </div>
 
@@ -204,7 +204,7 @@
                                              "transferred" => "Transferred",
                                              "others" => "Others",
                                      );
-                                     echo form_dropdown('how_joined', $items, (isset($result->how_joined)) ? $result->how_joined : '', ' id="how_joined_" class="form-control search-select" data-placeholder="Select Options..." ');
+                                     echo form_dropdown('how_joined', $items, (isset($result->how_joined)) ? $result->how_joined : '', ' id="how_joined_" class="form-control select" data-placeholder="Select Options..." ');
                                  ?> <i style="color:red"><?php echo form_error('how_joined'); ?></i>
                             </div>
                         </div>
@@ -217,7 +217,7 @@
                                              "yes" => "Yes",
                                              "no" => "NO",
                                      );
-                                     echo form_dropdown('baptised', $items, (isset($result->baptised)) ? $result->baptised : '', ' id="baptised_" class="form-control search-select" data-placeholder="Select Options..." ');
+                                     echo form_dropdown('baptised', $items, (isset($result->baptised)) ? $result->baptised : '', ' id="baptised_" class="form-control select" data-placeholder="Select Options..." ');
                                  ?> <i style="color:red"><?php echo form_error('baptised'); ?></i>
                             </div>
 
@@ -231,7 +231,7 @@
                                              "yes" => "Yes",
                                              "no" => "NO",
                                      );
-                                     echo form_dropdown('confirmed', $items, (isset($result->confirmed)) ? $result->confirmed : '', ' id="confirmed_" class="form-control search-select" data-placeholder="Select Options..." ');
+                                     echo form_dropdown('confirmed', $items, (isset($result->confirmed)) ? $result->confirmed : '', ' id="confirmed_" class="form-control select" data-placeholder="Select Options..." ');
                                  ?> <i style="color:red"><?php echo form_error('confirmed'); ?></i>
                             </div>
 
@@ -273,7 +273,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-3 col-sm-offset-5">
-                                <a class="btn btn-blue next-step btn-block">
+                                <a class="btn btn-primary next-step btn-block">
                                     Next <i class="icon-circle-arrow-right"></i>
                                 </a>
                             </div>
@@ -329,7 +329,7 @@
                             </a>
                         </div>
                         <div class="col-sm-2 col-sm-offset-3">
-                            <button class="btn btn-blue next-step btn-block">
+                            <button class="btn btn-primary next-step btn-block">
                                 Next <i class="icon-circle-arrow-right"></i>
                             </button>
                         </div>
@@ -358,7 +358,7 @@
                             <label class='col-sm-3 control-label' for='parent_id'>Select Parent | Guardian <span class='required'>*</span></label>
                             <div class="col-sm-5">
                                  <?php
-                                    echo form_dropdown('parent_id', array('' => 'Select Member') + $parents, (isset($result->parent_id)) ? $result->parent_id : '', ' id="parent_id" class="form-control search-select" data-placeholder="Select Options..." ');
+                                    echo form_dropdown('parent_id', array('' => 'Select Member') + $parents, (isset($result->parent_id)) ? $result->parent_id : '', ' id="parent_id" class="form-control select" data-placeholder="Select Options..." ');
                                 ?> <i style="color:red"><?php echo form_error('parent_id'); ?></i>
                             </div>
                         </div>	
@@ -375,7 +375,7 @@
                                              "grandparent" => "Grand Parent",
                                              "others" => "Others",
                                      );
-                                     echo form_dropdown('relationship', $items, (isset($post->relationship)) ? $post->relationship : '', ' id="form-field-select-1" class="form-control search-select" data-placeholder="Select Options..." ');
+                                     echo form_dropdown('relationship', $items, (isset($post->relationship)) ? $post->relationship : '', ' id="form-field-select-1" class="form-control select" data-placeholder="Select Options..." ');
                                  ?> <i style="color:red"><?php echo form_error('relationship'); ?></i>
                             </div>
                         </div>
@@ -414,7 +414,7 @@
                                                  "grandparent" => "Grand Parent",
                                                  "others" => "Others",
                                          );
-                                         echo form_dropdown('relationship1', $items, (isset($result->relationship1)) ? $result->relationship1 : '', ' id="form-field-select-1" class="form-control search-select" data-placeholder="Select Options..." ');
+                                         echo form_dropdown('relationship1', $items, (isset($result->relationship1)) ? $result->relationship1 : '', ' id="form-field-select-1" class="form-control select" data-placeholder="Select Options..." ');
                                      ?> <i style="color:red"><?php echo form_error('relationship1'); ?></i>
                                 </div></div>
 
@@ -428,7 +428,7 @@
                                                  "Female" => "Female",
                                                  "Transgender" => "Transgender",
                                          );
-                                         echo form_dropdown('gender1', $items, (isset($result->gender1)) ? $result->gender1 : '', ' id="gender_1" class="form-control search-select" data-placeholder="Select Options..." ');
+                                         echo form_dropdown('gender1', $items, (isset($result->gender1)) ? $result->gender1 : '', ' id="gender_1" class="form-control select" data-placeholder="Select Options..." ');
                                      ?> <i style="color:red"><?php echo form_error('gender'); ?></i>
                                 </div>
 
@@ -473,7 +473,7 @@
                                 <label class='col-sm-3 control-label' for='county'>County <span class='required'>*</span></label>
                                 <div class="col-sm-8">
                                      <?php
-                                        echo form_dropdown('county', $counties, (isset($result->county)) ? $result->county : '', ' id="county_" class="form-control search-select" data-placeholder="Select Options..." ');
+                                        echo form_dropdown('county', $counties, (isset($result->county)) ? $result->county : '', ' id="county_" class="form-control select" data-placeholder="Select Options..." ');
                                     ?> <i style="color:red"><?php echo form_error('county'); ?></i>
                                 </div>
                             </div>

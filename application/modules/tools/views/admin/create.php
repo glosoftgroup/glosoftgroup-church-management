@@ -107,7 +107,7 @@
                          $bt = array(
                                  'name' => 'submit',
                                  'id' => 'generate',
-                                 'class' => 'btn btn-blue',
+                                 'class' => 'btn btn-primary',
                                  'type' => 'submit',
                                  'content' => 'Generate!'
                          );

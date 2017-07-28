@@ -257,7 +257,7 @@
     <?php $attributes = array('class' => 'smart-wizard form-horizontal', 'id' => 'form');
         echo form_open_multipart(current_url(), $attributes);
     ?>
-    <div class="panel panel-default">
+    <div class="panel panel-default animated fadeIn">
         <div class="panel-heading">
             <i class="icon-external-link-sign position-left"></i>
             <h3 class="panel-title"><?php echo ($updType == 'edit') ? 'Edit ' : 'Add '; ?> Members </h3>
@@ -352,7 +352,7 @@
                                              "Dr." => "Dr.",
                                              "Eng." => "Eng.",
                                      );
-                                     echo form_dropdown('title', $items, (isset($result->title)) ? $result->title : '', ' id="title_" class="form-control search-select" data-placeholder="Select Options..." ');
+                                     echo form_dropdown('title', $items, (isset($result->title)) ? $result->title : '', ' id="title_" class="form-control select" data-placeholder="Select Options..." ');
                                  ?> <i style="color:red"><?php echo form_error('title'); ?></i>
                             </div>
                         </div>
@@ -385,7 +385,7 @@
                                              "Female" => "Female",
                                              "Transgender" => "Transgender",
                                      );
-                                     echo form_dropdown('gender', $items, (isset($result->gender)) ? $result->gender : '', ' id="gender_1" class="form-control search-select" data-placeholder="Select Options..." ');
+                                     echo form_dropdown('gender', $items, (isset($result->gender)) ? $result->gender : '', ' id="gender_1" class="form-control select" data-placeholder="Select Options..." ');
                                  ?> <i style="color:red"><?php echo form_error('gender'); ?></i>
                             </div>
 
@@ -439,7 +439,7 @@
                             <label class='col-sm-3 control-label' for='country'>Country <span class='required'>*</span></label>
                             <div class="col-sm-8">
                                  <?php
-                                    echo form_dropdown('country', $countrylist, (isset($result->country)) ? $result->country : '', ' id="country_" class="form-control search-select" data-placeholder="Select Options..." ');
+                                    echo form_dropdown('country', $countrylist, (isset($result->country)) ? $result->country : '', ' id="country_" class="form-control select" data-placeholder="Select Options..." ');
                                 ?> <i style="color:red"><?php echo form_error('country'); ?></i>
                             </div></div>
 
@@ -450,7 +450,7 @@
                             <label class='col-sm-3 control-label' for='county'>County <span class='required'>*</span></label>
                             <div class="col-sm-8">
                                  <?php
-                                    echo form_dropdown('county', $counties, (isset($result->county)) ? $result->county : '', ' id="county_" class="form-control search-select" data-placeholder="Select Options..." ');
+                                    echo form_dropdown('county', $counties, (isset($result->county)) ? $result->county : '', ' id="county_" class="form-control select" data-placeholder="Select Options..." ');
                                 ?> <i style="color:red"><?php echo form_error('county'); ?></i>
                             </div>
                         </div>
@@ -486,7 +486,7 @@
                                              "widower" => "Widower",
                                              "not known" => "Not Known",
                                      );
-                                     echo form_dropdown('marital_status', $items, (isset($result->marital_status)) ? $result->marital_status : '', ' id="marital_status_" class="form-control search-select" data-placeholder="Select Options..." ');
+                                     echo form_dropdown('marital_status', $items, (isset($result->marital_status)) ? $result->marital_status : '', ' id="marital_status_" class="form-control select" data-placeholder="Select Options..." ');
                                  ?> <i style="color:red"><?php echo form_error('marital_status'); ?></i>
                             </div></div>
 
@@ -503,7 +503,7 @@
                                              "transferred" => "Transferred",
                                              "visitor" => "Visitor",
                                      );
-                                     echo form_dropdown('member_status', $items, (isset($result->member_status)) ? $result->member_status : '', ' id="member_status_" class="form-control search-select" data-placeholder="Select Options..." ');
+                                     echo form_dropdown('member_status', $items, (isset($result->member_status)) ? $result->member_status : '', ' id="member_status_" class="form-control select" data-placeholder="Select Options..." ');
                                  ?> <i style="color:red"><?php echo form_error('member_status'); ?></i>
                             </div></div>
 
@@ -541,7 +541,7 @@
                     </div>						
                     <div class="form-group">
                         <div class="col-sm-2 col-sm-offset-8">
-                            <a class="btn btn-blue next-step btn-block">
+                            <a class="btn btn-primary next-step btn-block">
                                 Next <i class="icon-circle-arrow-right"></i>
                             </a>
                         </div>
@@ -564,7 +564,7 @@
                                          "transferred" => "Transferred",
                                          "others" => "Others",
                                  );
-                                 echo form_dropdown('how_joined', $items, (isset($result->how_joined)) ? $result->how_joined : '', ' id="how_joined_" class="form-control search-select" data-placeholder="Select Options..." ');
+                                 echo form_dropdown('how_joined', $items, (isset($result->how_joined)) ? $result->how_joined : '', ' id="how_joined_" class="form-control select" data-placeholder="Select Options..." ');
                              ?> <i style="color:red"><?php echo form_error('how_joined'); ?></i>
                         </div>
                     </div>
@@ -578,7 +578,7 @@
                                          "no" => "NO",
                                          "Others" => "Others",
                                  );
-                                 echo form_dropdown('baptised', $items, (isset($result->baptised)) ? $result->baptised : '', ' id="baptised_" class="form-control search-select" data-placeholder="Select Options..." ');
+                                 echo form_dropdown('baptised', $items, (isset($result->baptised)) ? $result->baptised : '', ' id="baptised_" class="form-control select" data-placeholder="Select Options..." ');
                              ?> <i style="color:red"><?php echo form_error('baptised'); ?></i>
                         </div>
 
@@ -593,7 +593,7 @@
                                          "no" => "NO",
                                          "Others" => "Others",
                                  );
-                                 echo form_dropdown('confirmed', $items, (isset($result->confirmed)) ? $result->confirmed : '', ' id="confirmed_" class="form-control search-select" data-placeholder="Select Options..." ');
+                                 echo form_dropdown('confirmed', $items, (isset($result->confirmed)) ? $result->confirmed : '', ' id="confirmed_" class="form-control select" data-placeholder="Select Options..." ');
                              ?> <i style="color:red"><?php echo form_error('confirmed'); ?></i>
                         </div>
 
@@ -642,7 +642,7 @@
                             </a>
                         </div>
                         <div class="col-sm-2 col-sm-offset-3">
-                            <a class="btn btn-blue next-step btn-block">
+                            <a class="btn btn-primary next-step btn-block">
                                 Next <i class="icon-circle-arrow-right"></i>
                             </a>
                         </div>
@@ -683,7 +683,7 @@
                                              "Female" => "Female",
                                              "Transgender" => "Transgender",
                                      );
-                                     echo form_dropdown('gender1', $items, (isset($result->gender1)) ? $result->gender1 : '', ' id="gender_1" class="form-control search-select" data-placeholder="Select Options..." ');
+                                     echo form_dropdown('gender1', $items, (isset($result->gender1)) ? $result->gender1 : '', ' id="gender_1" class="form-control select" data-placeholder="Select Options..." ');
                                  ?> <i style="color:red"><?php echo form_error('gender'); ?></i>
                             </div>
 
@@ -703,7 +703,7 @@
                                              "friend" => "Friend",
                                              "others" => "Others",
                                      );
-                                     echo form_dropdown('type1', $items, (isset($result->type1)) ? $result->type1 : '', ' id="form-field-select-1" class="form-control search-select" data-placeholder="Select Options..." ');
+                                     echo form_dropdown('type1', $items, (isset($result->type1)) ? $result->type1 : '', ' id="form-field-select-1" class="form-control select" data-placeholder="Select Options..." ');
                                  ?> <i style="color:red"><?php echo form_error('type'); ?></i>
                             </div></div>
 
@@ -723,7 +723,7 @@
                                              "child" => "Child",
                                              "others" => "Others",
                                      );
-                                     echo form_dropdown('relationship1', $items, (isset($result->relationship1)) ? $result->relationship1 : '', ' id="form-field-select-1" class="form-control search-select" data-placeholder="Select Options..." ');
+                                     echo form_dropdown('relationship1', $items, (isset($result->relationship1)) ? $result->relationship1 : '', ' id="form-field-select-1" class="form-control select" data-placeholder="Select Options..." ');
                                  ?> <i style="color:red"><?php echo form_error('relationship'); ?></i>
                             </div></div>
                     </div>
@@ -768,7 +768,7 @@
                             </a>
                         </div>
                         <div class="col-sm-2 col-sm-offset-3">
-                            <button class="btn btn-blue next-step btn-block">
+                            <button class="btn btn-primary next-step btn-block">
                                 Next <i class="icon-circle-arrow-right"></i>
                             </button>
                         </div>
@@ -784,7 +784,7 @@
                         <label class='col-sm-3 control-label'>Ministries Interested in </label>	
                         <div class="col-sm-5">
                              <?php
-                                echo form_dropdown('ministries[]', $ministries, (isset($result->ministries)) ? $result->ministries : '', ' id="form-field-select-4" multiple="multiple" class="form-control search-select" data-placeholder="Select Options..." ');
+                                echo form_dropdown('ministries[]', $ministries, (isset($result->ministries)) ? $result->ministries : '', ' id="form-field-select-4" multiple="multiple" class="form-control select" data-placeholder="Select Options..." ');
                             ?> <i style="color:red"><?php echo form_error('ministries'); ?></i>
                         </div>
 
@@ -793,7 +793,7 @@
                         <label class='col-sm-3 control-label'>Member HBC </label>	
                         <div class="col-sm-5">
                              <?php
-                                echo form_dropdown('hbc_id', $hbcs, (isset($result->hbc_id)) ? $result->hbc_id : '', ' id="confirmed_" class="form-control search-select" data-placeholder="Select Options..." ');
+                                echo form_dropdown('hbc_id', $hbcs, (isset($result->hbc_id)) ? $result->hbc_id : '', ' id="confirmed_" class="form-control select" data-placeholder="Select Options..." ');
                             ?> <i style="color:red"><?php echo form_error('hbc_id'); ?></i>
                         </div>
 

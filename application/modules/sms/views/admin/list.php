@@ -121,7 +121,7 @@
     <button class="btn btn-sm btn-dark-grey">Your SMS Account Balance is <span style="text-decoration:underline;
                                                                                font-weight:bold;"><?php echo $bal->balance; ?></span> sms</button>
 
-    <div class="panel panel-default"> 
+    <div class="panel panel-default animated fadeIn"> 
         <div class="panel-heading">
             <i class="icon-external-link-sign"></i>
             <h3 class="panel-title">All Sms </h3>

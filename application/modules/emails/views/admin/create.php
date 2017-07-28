@@ -126,7 +126,7 @@
         </button> 
     </div>
 
-    <div class="panel panel-default"> 
+    <div class="panel panel-default animated fadeIn"> 
         <div class="panel-heading">
             <i class="icon-external-link-sign"></i>
             <h3 class="panel-title">Inbox</h3>

@@ -1,6 +1,6 @@
 <?php echo $template['partials']['perms']; ?>
 <div class="row">
-    <div class="panel panel-default">
+    <div class="panel panel-default animated fadeIn">
         <div class="panel-heading">
             <i class="clip-checkbox"></i>
             Fix Resources

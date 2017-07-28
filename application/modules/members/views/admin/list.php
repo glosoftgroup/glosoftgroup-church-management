@@ -1,5 +1,5 @@
 <div class="col-sm-12">
-    <div class="panel panel-default"> 
+    <div class="panel panel-default animated fadeIn"> 
         <div class="panel-heading">
           <h3 class="panel-title">
             <i class="position-left icon-external-link-sign"></i>

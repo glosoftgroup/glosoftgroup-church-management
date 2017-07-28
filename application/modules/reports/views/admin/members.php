@@ -1,5 +1,5 @@
 <div class="col-sm-12">
-    <div class="panel panel-default"> 
+    <div class="panel panel-default animated fadeIn"> 
         <div class="panel-heading">
             <i class="icon-external-link-sign"></i>
             <h3 class="panel-title">Members Reports </h3>
@@ -20,7 +20,7 @@
 
                     <div class="col-md-6 links">
                         <!-- start: BORDERED TABLE PANEL -->
-                        <div class="panel panel-default">
+                        <div class="panel panel-default animated fadeIn">
                             <div class="panel-heading">
                                 <i class="icon-external-link-sign"></i>
                                 Members Management Report
@@ -135,7 +135,7 @@
 
                     <div class="col-md-6 print-links" style="display:none">
                         <!-- start: BORDERED TABLE PANEL -->
-                        <div class="panel panel-default">
+                        <div class="panel panel-default animated fadeIn">
                             <div class="panel-heading">
                                 <i class="icon-external-link-sign"></i>
                                 Members Management Report
@@ -243,7 +243,7 @@
 
                     <div class="col-md-6">
                         <!-- start: TILTED PIE PANEL -->
-                        <div class="panel panel-default">
+                        <div class="panel panel-default animated fadeIn">
                             <div class="panel-heading">
                                 <i class="icon-external-link-sign"></i>
                                 Registration Pie
@@ -279,7 +279,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <!-- start: CATEGORIES PANEL -->
-                        <div class="panel panel-default">
+                        <div class="panel panel-default animated fadeIn">
                             <div class="panel-heading">
                                 <i class="icon-external-link-sign"></i>
                                 Registration Per Month

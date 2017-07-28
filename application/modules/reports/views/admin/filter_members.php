@@ -1,5 +1,5 @@
 <div class="col-sm-12">
-    <div class="panel panel-default"> 
+    <div class="panel panel-default animated fadeIn"> 
         <div class="panel-heading">
             <i class="icon-external-link-sign"></i>
             <h3 class="panel-title">Reports Of <?php 'Members  - (' . date('Y') . ')'; ?> </h3>
@@ -104,7 +104,7 @@
 
                         </div>
                         <div class="clearfix"></div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-default animated fadeIn">
 
                             <div class="panel-body">
 
@@ -196,7 +196,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <!-- start: CATEGORIES PANEL -->
-                        <div class="panel panel-default">
+                        <div class="panel panel-default animated fadeIn">
                             <div class="panel-heading">
                                 <i class="icon-external-link-sign"></i>
                                 Members Registration Graph

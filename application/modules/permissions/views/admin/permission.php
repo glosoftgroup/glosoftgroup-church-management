@@ -1,7 +1,7 @@
 <?php echo $template['partials']['perms']; ?>
 <div class="row">
     <div class="col-sm-4">
-        <div class="panel panel-default">
+        <div class="panel panel-default animated fadeIn">
             <div class="panel-heading">
                 <i class="clip-users"></i>
                 Select User Groups
@@ -48,7 +48,7 @@
     </div>
 
     <div class="col-sm-8">
-        <div class="panel panel-default">
+        <div class="panel panel-default animated fadeIn">
             <div class="panel-heading">
                 <i class="clip-users-2"></i>
                 Assign Permissions

@@ -1,5 +1,5 @@
 <div class="col-sm-12">
-    <div class="panel panel-default"> 
+    <div class="panel panel-default animated fadeIn"> 
         <div class="panel-heading">
             <i class="icon-external-link-sign"></i>
             <h3 class="panel-title">All Users</h3>
@@ -36,7 +36,7 @@
             <?php echo form_hidden(array('id' => $user['id'])); ?>
             <label class=' col-sm-3 control-label' for='last_name'></label>
             <label class=' col-sm-6 control-label'>
-                <p><?php echo form_submit('submit', 'Submit', 'class="btn btn-blue btn-small"'); ?></p>
+                <p><?php echo form_submit('submit', 'Submit', 'class="btn btn-primary btn-small"'); ?></p>
             </label>
             <?php echo form_close(); ?>
         </div>

@@ -1,55 +1,120 @@
-
-<?php
-$str = is_array($message) ? $message['text'] : $message;
-echo (isset($message) && !empty($message)) ? '
-                        <div class="alert alert-danger "> 
-                <button type="button" class="close" data-dismiss="alert">
-                    <i class="icon-remove"></i>
-                </button> ' . $str . '   
-            </div>' : '';
-?> 
-<?php echo form_open("admin/login", 'role="form" id="" role="form"  class="form-login" '); ?>  
-
-<div class="errorHandler alert alert-danger no-display">
-    <i class="icon-remove-sign"></i> You have some form errors. Please check below.
-</div>
-<fieldset>
-    <div class="form-group">
-        <span class="input-icon">
-            <input type="text" class="form-control" name="email" id="username" placeholder="Username">
-            <i class="icon-user"></i> 
-        </span>
-    </div>
-    <div class="form-group form-actions">
-        <span class="input-icon">
-            <input type="password" class="form-control password" name="password" id="passwd" placeholder="Password">
-            <i class="icon-lock"></i>
-            <a class="forgot" href="#">
-                I forgot my password
-            </a> </span>
-    </div>
-    <div class="form-actions">
-        <label for="remember" class="checkbox-inline">
-            <input type="checkbox" class="grey remember" id="remember" name="remember">
-            <span style="color:#FFF !important;">Keep me signed in</span>
-        </label>
-        <button type="submit" class="btn btn-bricky pull-right">
-            Login <i class="icon-circle-arrow-right"></i>
-        </button>
-    </div>
-    
-      <div class="new-account">
-          &nbsp;
-      <?php /*Don't have an account yet?
-      <a href="#" class="register">
-      Create an account
-      </a>*/ ?>
-      </div> 
-</fieldset>
-
-<?php echo form_close(); ?>
-
-
-<style>
-    .errors-container p{color: #fff;}
+<style type="text/css">
+    .logox {
+        width: 80px;
+        height: 80px;
+    }
 </style>
+<!-- Main navbar -->
+    <div class="navbar navbar-inverse bg-indigo">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="<?=base_url();?>">
+
+            </a>
+
+            <ul class="nav navbar-nav pull-right visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+            <ul class="nav navbar-nav navbar-right">           
+            </ul>
+        </div>
+    </div>
+    <!-- /main navbar -->
+
+
+    <!-- Page container -->
+    <div class="page-container">
+
+        <!-- Page content -->
+        <div class="page-content">
+
+            <!-- Main content -->
+            <div class="content-wrapper">
+
+                <!-- Content area -->
+                <div class="content">
+
+                    <!-- Simple login form -->
+                    <?php
+          echo form_open("admin/login", ' class="form-login" ');  ?>
+                        <div class="panel panel-body login-form">
+                            <div class="text-center">
+                                <div class="icon-object border-slate-300 text-slate-300">
+                                 
+                                    <?php echo theme_image('logo.png',array('class'=>"logox")); ?>
+
+                            
+                   
+                                </div>
+                                <?php
+                $str = is_array($message) ? $message['text'] : $message;
+                echo (isset($message) && !empty($message)) ? '
+                                <div class="error alert alert-danger ">
+                        <button type="button" class="close" data-dismiss="alert">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </button>' . $str . '
+                       </div>' : '';
+                ?>
+                                <h5 class="content-group">Login to your account <small class="display-block">Enter your credentials below</small></h5>
+                            </div>
+
+                            <div class="form-group has-feedback has-feedback-left">
+                                <input name='email' type="email" class="form-control" placeholder="Email">
+                                <div class="form-control-feedback">
+                                    <i class="icon-user text-muted"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-group has-feedback has-feedback-left">
+                                <input type="password" name='password' class="form-control" placeholder="Password">
+                                <div class="form-control-feedback">
+                                    <i class="icon-lock2 text-muted"></i>
+                                </div>
+                            </div>
+                            <div class="form-group login-options">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" class="styled" checked="checked"
+                                            name="rem">
+                                            Remember
+                                        </label>
+                                    </div>
+
+                                    <div class="col-sm-6 text-right">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn bg-indigo btn-block">Sign in <i class="icon-circle-right2 position-right"></i></button>
+                            </div>
+
+                            <div class="text-center">
+                                <a href="login_password_recover.html">Forgot password?</a>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- /simple login form -->
+
+
+                    <!-- Footer -->
+                    <div class="footer text-muted text-center">
+                        <?php echo date('Y');?> &copy; Glosoft Group.</a>
+                    </div>
+                    <!-- /footer -->
+
+                </div>
+                <!-- /content area -->
+
+            </div>
+            <!-- /main content -->
+
+        </div>
+        <!-- /page content -->
+
+    </div>
+    <!-- /page container -->

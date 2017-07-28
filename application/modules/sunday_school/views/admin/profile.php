@@ -321,7 +321,7 @@
 <?php $attributes = array('class' => 'smart-wizard form-horizontal', 'id' => 'form');
     echo form_open_multipart('admin/sunday_school/edit/' . $p->id, $attributes);
 ?>
-                <div class="panel panel-default"> 
+                <div class="panel panel-default animated fadeIn"> 
                     <div class="panel-heading">
                         <i class="icon-external-link-sign"></i>
                         <h3 class="panel-title">Edit Sunday School Child </h3>
@@ -550,7 +550,7 @@
 
                                     <div class="form-group">
                                         <div class="col-sm-3 col-sm-offset-8">
-                                            <a class="btn btn-blue next-step btn-block">
+                                            <a class="btn btn-primary next-step btn-block">
                                                 Next <i class="icon-circle-arrow-right"></i>
                                             </a>
                                         </div>
@@ -606,7 +606,7 @@
                                         </a>
                                     </div>
                                     <div class="col-sm-2 col-sm-offset-3">
-                                        <button class="btn btn-blue next-step btn-block">
+                                        <button class="btn btn-primary next-step btn-block">
                                             Next <i class="icon-circle-arrow-right"></i>
                                         </button>
                                     </div>

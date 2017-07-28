@@ -3,7 +3,7 @@
 
 
     <div class='clearfix'></div>	
-    <div class="panel panel-default"> 
+    <div class="panel panel-default animated fadeIn"> 
 
         <div class="panel-heading">
 

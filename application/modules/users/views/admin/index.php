@@ -58,7 +58,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="widget-bottom ">
-                <a class="btn btn-blue"   href="<?php echo site_url('admin/users/create_user'); ?>">Create New user</a></div>
+                <a class="btn btn-primary"   href="<?php echo site_url('admin/users/create_user'); ?>">Create New user</a></div>
 
         </div>
 

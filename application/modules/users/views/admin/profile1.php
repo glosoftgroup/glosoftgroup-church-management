@@ -120,7 +120,7 @@
                            <span class="smaller-90"> Uploads </span>
                            </span>
 
-                           <span class="btn btn-app btn-small btn-blue no-hover">
+                           <span class="btn btn-app btn-small btn-primary no-hover">
                            <span class="bigger-175"> 55 </span>
 
                            <br />
@@ -259,7 +259,7 @@
                     <div class="space-6"></div>
 
                     <div class="center">
-                        <!-- <a href="#" class="btn btn-small btn-blue">
+                        <!-- <a href="#" class="btn btn-small btn-primary">
                              <i class="icon-rss bigger-150 middle"></i>
 
                              View more activities

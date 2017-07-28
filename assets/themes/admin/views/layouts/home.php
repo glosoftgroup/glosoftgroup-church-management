@@ -19,9 +19,9 @@
         <?php echo core_css('core/css/components.css'); ?>
         <?php echo core_css('core/css/colors.css'); ?>
         <link rel="stylesheet" href="<?php echo plugin_path('iCheck/skins/all.css'); ?>" >
-         <!-- echo theme_css('main.css'); ?> --> -->
+         
          <link rel="stylesheet" href=" <?php echo plugin_path('perfect-scrollbar/src/perfect-scrollbar.css'); ?>">
-        <?php echo theme_css('custom.css'); ?>
+      
         <?=core_css("core/css/extras/animate.min.css");?>
         <style>.error { color:red; }</style>
           <!-- /global stylesheets -->
@@ -78,6 +78,7 @@
        <?php echo core_js('core/js/plugins/ui/moment/moment.min.js'); ?>
        <?php echo core_js('core/js/plugins/ui/fullcalendar/fullcalendar.min.js'); ?>
        <?php echo core_js('core/js/plugins/visualization/echarts/echarts.js'); ?>
+       <?=core_js('plugins/forms/styling/uniform.min.js');?>
      
         
         <link rel="shortcut icon" type="image/ico" href="<?php echo image_path('favicon.ico'); ?>" />
@@ -89,7 +90,7 @@
             $ccls = 'ssGreen';
     }
     ?>
-    <body class="navbar-top " >
+    <body class="navbar-top sidebar-xs has-detached-right" >
         <?php echo $template['partials']['top']; ?>
         <!-- Page container -->
         <div class="page-container">
@@ -135,8 +136,452 @@
                     <?php } ?>
                 </div>
                 <!-- /page header -->
+ <?=core_css('icons/icomoon/styles.css');?>
+                <!-- Content area -->
+                <div class="content">
+
+                    <!-- Detached content -->
+                    <div class="container-detached">
+                        <div class="content-detached">
+                           <div class="category-content">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <button class="btn bg-teal-400 btn-block btn-float btn-float-lg" type="button"><i class="fa fa-user"></i> <span>Branch</span></button>
+                                        <button class="btn bg-purple-300 btn-block btn-float btn-float-lg" type="button"><i class="icon-mail-read"></i> <span>Messages</span></button>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <button class="btn bg-teal-400 btn-block btn-float btn-float-lg" type="button"><i class="fa fa-user"></i> <span>Branch</span></button>
+                                        <button class="btn bg-purple-300 btn-block btn-float btn-float-lg" type="button"><i class="icon-mail-read"></i> <span>Messages</span></button>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <button class="btn bg-teal-400 btn-block btn-float btn-float-lg" type="button"><i class="fa fa-user"></i> <span>Branch</span></button>
+                                        <button class="btn bg-purple-300 btn-block btn-float btn-float-lg" type="button"><i class="icon-mail-read"></i> <span>Messages</span></button>
+                                    </div>
+                                    
+                                    <div class="col-xs-3">
+                                        <button class="btn bg-warning-400 btn-block btn-float btn-float-lg" type="button"><i class="icon-stats-bars"></i> <span>Statistics</span></button>
+                                        <button class="btn bg-blue btn-block btn-float btn-float-lg" type="button"><i class="icon-people"></i> <span>Users</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Info alert -->
+                            <div class="alert alert-info alert-styled-left alert-arrow-left alert-component">
+                                <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                <h6 class="alert-heading text-semibold">Sticky with custom scroll</h6>
+                                If detached sidebar is sticked to the top and its content is higher than page height, vertical scrollbar appears. You can use <code>custom</code> styled scrollbar to make it sexy.
+                            </div>
+                            <!-- /info alert -->
 
 
+                            <!-- Sidebars overview -->
+                            <div class="panel panel-flat">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">Sidebars overview</h5>
+                                    <div class="heading-elements">
+                                        <ul class="icons-list">
+                                            <li><a data-action="collapse"></a></li>
+                                            <li><a data-action="reload"></a></li>
+                                            <li><a data-action="close"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="panel-body">
+                                    <p class="content-group">Sidebar - vertical area that displays onscreen and presents widget components and website navigation menu in a text-based hierarchical form. All sidebars are css-driven - just add one of css classes to the <code>body</code> tag and/or <code>.sidebar</code> container, and sidebar will change its width and color. No js, css only. Although sidebar type is based on css, buttons do their job with jQuery - they switch necessary classes in <code>&lt;body></code> tag. Below you'll find summarized tables with all available <code>button</code> and sidebar container classes. By default the template includes 6 different sidebar types and combinations:</p>
+
+                                    <div class="content-group">
+                                        <h6 class="text-semibold">1. Default sidebar</h6>
+                                        <p>Default template sidebar has <code>260px</code> width, aligned to the left (to the right in RTL version) and has dark blue background color. All navigation levels are based on accordion <strong>or</strong> collapsible functionality, open on click. Supports 2 versions: static and fixed. Fixed version can be used with native or custom scrollbars.</p>
+                                    </div>
+
+                                    <div class="content-group">
+                                        <h6 class="text-semibold">2. Mini sidebar</h6>
+                                        <p>Mini sidebar has <code>56px</code> width, no text in parent level of menu items, aligned to the left (to the right in RTL version) and has dark blue background color. Second navigation level opens on parent level hover, absolute positioned, other children levels are based on accordion or collapsible functionality, open on click. It is <strong>required</strong> to add <code>.sidebar-xs</code> class to the <code>&lt;body></code> tag. This class is responsible for sidebar width and main navigation. By default all components except main navigation are hidden in mini sidebar.</p>
+                                    </div>
+
+                                    <div class="content-group">
+                                        <h6 class="text-semibold">3. Dual sidebar</h6>
+                                        <p>Main sidebar has <code>260px</code> width or <code>56px</code> (if <code>.sidebar-xs</code> class added). Secondary sidebar has fixed width of <code>260px</code>, which is identical to default and opposite sidebars, so different sidebar components can be placed to all these sidebars. Main and secondary sidebars can contain any content - menu, navigation, buttons, lists, tabs etc. In this type of sidebar only main sidebar is collapsible.</p>
+                                    </div>
+
+                                    <div class="content-group">
+                                        <h6 class="text-semibold">4. Double sidebar</h6>
+                                        <p>Double sidebar includes additional sidebar displayed on the opposite side of the main sidebar. It has a static position, appears as an additional component with 100% height and pushes content left/right. There are 2 different ways of displaying alternative sidebar: first - when it collapses main sidebar from default to mini width and second - when it hides the main sidebar. For these actions are responsible 2 different buttons - <code>.sidebar-opposite-toggle</code> and <code>.sidebar-opposite-fix</code>.</p>
+                                    </div>
+
+                                    <div class="content-group">
+                                        <h6 class="text-semibold">5. Dual double sidebar</h6>
+                                        <p>Dual and Double sidebars can be used together, so basically it is a 4 column layout. When opposite sidebar is shown, additional options are available: hide main sidebar, hide secondary sidebar, hide all sidebars or collapse main sidebar width. Since opposite sidebar is hidden by default, by manipulating classes you can display all 4 sidebars at once. Options are accessible via proper button and/or body classes.</p>
+                                    </div>
+
+                                    <div class="content-group">
+                                        <h6 class="text-semibold">6. Detached sidebar</h6>
+                                        <p>Sidebar usually is not a part of content and mainly used for navigation. Limitless allows you to use sidebar outside and inside content area. Detached sidebar isn't based on grid and has the same width as other sidebars, this means all sidebar components can be placed inside detached sidebar. Supports left and right positioning.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /sidebars overview -->
+
+
+                            <!-- Button classes -->
+                            <div class="panel panel-flat">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">Button classes</h5>
+                                    <div class="heading-elements">
+                                        <ul class="icons-list">
+                                            <li><a data-action="collapse"></a></li>
+                                            <li><a data-action="reload"></a></li>
+                                            <li><a data-action="close"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="panel-body">
+                                    <h6 class="text-semibold">Overview</h6>
+                                    <p class="content-group">This table displays all optional <code>button</code> classes, responsible for the sidebar appearance. Depending on the sidebar type, add one of these classes to any button or link and this element will handle sidebar control. Multiple controls are also available - add as many sidebar controls as you wish. Pleas note: these classes don't change sidebar markup, only its CSS.</p>
+                                    <div class="table-responsive content-group-lg">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 300px;">Button class</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><code>.sidebar-main-toggle</code></td>
+                                                    <td>Collapsible sidebar. Changes main sidebar width from default to mini. This button is added to all pages by default.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-main-hide</code></td>
+                                                    <td>Hides and shows <code>main</code> sidebar. Used mostly in dual sidebar type to hide main sidebar. In other layouts this button does the same job as <code>.sidebar-hide-all</code> button.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-all-hide</code></td>
+                                                    <td>Hideable sidebar. Hides and shows <code>main</code> sidebar. Works with all sidebar types, except opposite sidebar.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-opposite-fix</code></td>
+                                                    <td>Double sidebar with fixed width. If alt sidebar is shown, main sidebar stays the same and doesn't change the width.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-opposite-toggle</code></td>
+                                                    <td>Collapsible double sidebar. If opposite sidebar is shown, main sidebar changes its width from default to mini. Works with all sidebar types - single and dual.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-opposite-main-hide</code></td>
+                                                    <td>Hides and shows <code>main</code> sidebar in dual sidebar layout. If opposite sidebar is shown, main sidebar is hidden. This works only in dual double sidebar version of layout.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-secondary-hide</code></td>
+                                                    <td>Hides/shows <code>secondary</code> sidebar in dual sidebar layout. Secondary sidebar supports only toggle functionality and always has fixed width of <code>260px</code>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-opposite-secondary-hide</code></td>
+                                                    <td>Hides/shows <code>secondary</code> sidebar in dual sidebar layout. If opposite sidebar is shown, secondary sidebar is hidden. This works only in dual double sidebar version of layout.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-opposite-hide</code></td>
+                                                    <td>Hides/shows <code>all</code> sidebars when opposite sidebar is shown. If opposite sidebar is shown, all sidebars are hidden. This works in all layout types.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-detached-hide</code></td>
+                                                    <td>Hides/shows <code>detached</code> sidebars. Detached sidebars aren't connected with other sidebars, so this is the only button that controls its visibility.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h6 class="text-semibold">Example Markup</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>Default placement of sidebar control buttons is top navbar:</p>
+                                            <pre class="language-markup content-group" data-line="7-11"><code>&lt;!-- Navbar placement -->
+&lt;div class="navbar navbar-inverse">
+    &lt;div class="navbar-header">...&lt;/div>
+    &lt;ul class="nav navbar-nav">
+        &lt;li>
+            &lt;a class="sidebar-main-toggle">
+                &lt;i class="icon-menu">&lt;/i>
+            &lt;/a>
+        &lt;/li>
+    &lt;/ul>
+&lt;/div>
+&lt;!-- /navbar placement -->
+</code></pre>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <p>Here is an example of button inside panel heading:</p>
+                                            <pre class="language-markup content-group" data-line="6-9"><code>&lt;!-- Panel heading placement -->
+&lt;div class="panel panel-default">
+    &lt;div class="panel-heading">
+        &lt;h5 class="panel-title">Panel title&lt;/h5>
+        &lt;div class="heading-elements">
+            &lt;button type="button" class="sidebar-main-toggle">
+                &lt;i class="icon-menu">&lt;/i>
+                Collapse sidebar
+            &lt;/button>
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="panel-body">...&lt;/div>
+&lt;/div>
+&lt;!-- /panel heading placement -->
+</code></pre>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <!-- /button classes -->
+
+
+                            <!-- Sidebar classes -->
+                            <div class="panel panel-flat">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">Sidebar classes</h5>
+                                    <div class="heading-elements">
+                                        <ul class="icons-list">
+                                            <li><a data-action="collapse"></a></li>
+                                            <li><a data-action="reload"></a></li>
+                                            <li><a data-action="close"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="panel-body">
+                                    <h6 class="text-semibold">Overview</h6>
+                                    <p class="content-group">This table demonstrates all classes for <code>sidebar</code> container, responsible for the sidebar width and color. Almost all these classes are mandatory, some of them are responsible for proper styling or have a specific code attached to this class (like <code>.sidebar-main</code> class, which has collapsible functionality attached). All classes can be combined depending on the type of sidebar:</p>
+                                    <div class="table-responsive content-group-lg">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 300px">Body class</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><code>.sidebar</code></td>
+                                                    <td>Default sidebar class, should be added in all layout types.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-main</code></td>
+                                                    <td>Defines main sidebar. Mini sidebar <code>.sidebar-xs</code> class takes effect only if class <code>.sidebar-main</code> specified. By default all components except main navigation are hidden in mini sidebar.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-secondary</code></td>
+                                                    <td>Defines secondary sidebar in dual sidebar layout. Has fixed <code>260px</code> width.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-opposite</code></td>
+                                                    <td>Defines opposite sidebar in double sidebar layout. Has fixed <code>260px</code> width and appears on the opposite side from the main sidebar.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-default</code></td>
+                                                    <td>Defines light sidebar. This class can be applied to all sidebar types and positions.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar.bg-*</code></td>
+                                                    <td>Defines sidebar background color. According to the custom color system, sidebar background color can be changed to one of the available colors by adding a proper class to the main sidebar container.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-detached</code></td>
+                                                    <td>Needs to be added to the parent container. Also requires <code>.has-detached-left</code> or <code>.has-detached-right</code> added to the <code>&lt;body></code> tag.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.sidebar-separate</code></td>
+                                                    <td>Removes background and border from sidebar and displays categories as separate widgets. Mainly used with detached sidebar.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h6 class="text-semibold">Example Markup</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>Default left aligned sidebar markup:</p>
+                                            <pre class="language-markup content-group" data-line="2"><code>&lt;!-- Default sidebar layout -->
+&lt;body>
+
+    &lt;!-- Page container -->
+    &lt;div class="page-container">
+
+        &lt;!-- Page content -->
+        &lt;div class="page-content">
+
+            &lt;!-- Main sidebar -->
+            &lt;div class="sidebar sidebar-main">
+                &lt;div class="sidebar-content">...&lt;/div>
+            &lt;/div>
+            &lt;!-- /main sidebar -->
+
+            &lt;!-- Main content -->
+            &lt;div class="content-wrapper">...&lt;/div>
+            &lt;!-- /main content -->
+
+        &lt;/div>
+        &lt;!-- /page content -->
+
+    &lt;/div>
+    &lt;!-- /page container -->
+
+&lt;/body>
+&lt;!-- /default sidebar layout -->
+</code></pre>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <p>Mini sidebar markup. The only difference is <code>&lt;body></code> class:</p>
+                                            <pre class="language-markup content-group" data-line="2"><code>&lt;!-- Mini sidebar layout -->
+&lt;body class="sidebar-xs">
+
+    &lt;!-- Page container -->
+    &lt;div class="page-container">
+
+        &lt;!-- Page content -->
+        &lt;div class="page-content">
+
+            &lt;!-- Main sidebar -->
+            &lt;div class="sidebar sidebar-main">
+                &lt;div class="sidebar-content">...&lt;/div>
+            &lt;/div>
+            &lt;!-- /main sidebar -->
+
+            &lt;!-- Main content -->
+            &lt;div class="content-wrapper">...&lt;/div>
+            &lt;!-- /main content -->
+
+        &lt;/div>
+        &lt;!-- /page content -->
+
+    &lt;/div>
+    &lt;!-- /page container -->
+
+&lt;/body>
+&lt;!-- /mini sidebar layout -->
+</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /sidebar classes -->
+
+                        </div>
+                    </div>
+                    <!-- /detached content -->
+
+
+                    <!-- Detached sidebar -->
+                    <div class="sidebar-detached">
+                        <div class="sidebar sidebar-default">
+                            <div class="sidebar-content">
+
+                                <!-- Sidebar search -->
+                                <div class="sidebar-category">
+                                    <div class="category-title">
+                                        <span>Search</span>
+                                        <ul class="icons-list">
+                                            <li><a href="sidebar_detached_sticky_custom.html#" data-action="collapse"></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="category-content">
+                                        <form action="#">
+                                            <div class="has-feedback has-feedback-left">
+                                                <input type="search" class="form-control" placeholder="Search">
+                                                <div class="form-control-feedback">
+                                                    <i class="icon-search4 text-size-base text-muted"></i>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- /sidebar search -->
+
+
+                                <!-- Action buttons -->
+                                <div class="sidebar-category">
+                                    <div class="category-title">
+                                        <span>Action buttons</span>
+                                        <ul class="icons-list">
+                                            <li><a href="sidebar_detached_sticky_custom.html#" data-action="collapse"></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="category-content">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <button class="btn bg-teal-400 btn-block btn-float btn-float-lg" type="button"><i class="icon-git-branch"></i> <span>Branch</span></button>
+                                                <button class="btn bg-purple-300 btn-block btn-float btn-float-lg" type="button"><i class="icon-mail-read"></i> <span>Messages</span></button>
+                                            </div>
+                                            
+                                            <div class="col-xs-6">
+                                                <button class="btn bg-warning-400 btn-block btn-float btn-float-lg" type="button"><i class="icon-stats-bars"></i> <span>Statistics</span></button>
+                                                <button class="btn bg-blue btn-block btn-float btn-float-lg" type="button"><i class="icon-people"></i> <span>Users</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /action buttons -->
+
+
+                                <!-- Sub navigation -->
+                                <div class="sidebar-category">
+                                    <div class="category-title">
+                                        <span>Navigation</span>
+                                        <ul class="icons-list">
+                                            <li><a href="sidebar_detached_sticky_custom.html#" data-action="collapse"></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="category-content no-padding">
+                                        <ul class="navigation navigation-alt navigation-accordion">
+                                            <li class="navigation-header">Actions</li>
+                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-googleplus5"></i> Create task</a></li>
+                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-portfolio"></i> Create project</a></li>
+                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-portfolio"></i> Create project</a>
+                                                <ul>
+                                                    <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-googleplus5"></i> Create task</a></li>
+                                                    <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-googleplus5"></i> Create task</a></li>
+                                                    <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-googleplus5"></i> Create task</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-compose"></i> Edit task list</a></li>
+                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-user-plus"></i> Assign users <span class="label label-primary">94 online</span></a></li>
+                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-collaboration"></i> Create team</a></li>
+                                            <li class="navigation-header">Navigate</li>
+                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-files-empty"></i> All tasks</a></li>
+                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-file-plus"></i> Active tasks <span class="badge badge-default">28</span></a></li>
+                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-file-check"></i> Closed tasks</a></li>
+                                            <li class="navigation-divider"></li>
+                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-reading"></i> Assigned to me <span class="badge badge-info">86</span></a></li>
+                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-make-group"></i> Assigned to my team <span class="badge badge-danger">47</span></a></li>
+                                            <li class="navigation-divider"></li>
+                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-cog3"></i> Settings</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- /sub navigation -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /detached sidebar -->
+
+
+                    <!-- Footer -->
+                    <div class="footer text-muted">
+                        &copy; 2015. <a href="sidebar_detached_sticky_custom.html#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
+                    </div>
+                    <!-- /footer -->
+
+                </div>
+                <!-- /content area -->
+                
+                
                 <!-- Content area -->
                 <div class="content">
          <!-- modal -->
@@ -1097,6 +1542,7 @@
     <?php echo core_js('core/js/plugins/ui/fullcalendar/fullcalendar.min.js'); ?>
     <?php echo core_js('core/js/plugins/visualization/echarts/echarts.js'); ?>
     <?php echo core_js('core/js/plugins/forms/selects/bootstrap_multiselect.js'); ?>
+    
     <script>
      // Default initialization
      $('.select').select2({

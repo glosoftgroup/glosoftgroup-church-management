@@ -1,5 +1,5 @@
 <div class="col-sm-12">
-    <div class="panel panel-default"> 
+    <div class="panel panel-default animated fadeIn"> 
         <div class="panel-heading">
             <i class="icon-external-link-sign"></i>
             <h3 class="panel-title">SMS Report </h3>
@@ -77,7 +77,7 @@
 
                     <div class="col-md-12">
                         <!-- start: TILTED PIE PANEL -->
-                        <div class="panel panel-default">
+                        <div class="panel panel-default animated fadeIn">
                             <div class="panel-heading">
                                 <i class="icon-external-link-sign"></i>
                                 SMS Communication Pie

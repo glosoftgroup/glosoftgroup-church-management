@@ -11,9 +11,9 @@
         <!-- Global stylesheets -->
           <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
         
+        <?php echo core_css('core/css/icons/icomoon/styles.css'); ?>
         <link rel="stylesheet" href="<?php echo plugin_path('font-awesome/css/font-awesome.min.css'); ?>" >
-        <?=core_css('icons/icomoon/styles.css');?>
-        <?=core_css("icons/fontawesome/styles.min.css");?>
+        
         <?php echo theme_css('fonts/style.css'); ?>
         
         <?php echo core_css('core/css/bootstrap.css'); ?>
@@ -23,12 +23,13 @@
         <?php echo theme_css('church.css'); ?>
         <link rel="stylesheet" href="<?php echo plugin_path('bootstrap-modal/css/bootstrap-modal-bs3patch.css'); ?>" >
 <link rel="stylesheet" href="<?php echo plugin_path('bootstrap-modal/css/bootstrap-modal.css'); ?>" >
-<link rel="stylesheet" href="<?php echo plugin_path('select2/select2.css'); ?>" >
+
+<link rel="stylesheet" href="<?php echo plugin_path('bootstrap-fileupload/bootstrap-fileupload.min.css'); ?>" >
          <link rel="stylesheet" href="<?php echo plugin_path('iCheck/skins/all.css'); ?>" >
           <?php echo theme_css('jquery.dataTables.css'); ?>
         <?php echo theme_css('tableTools.css'); ?>
         <?php echo theme_css('dataTables.colVis.min.css'); ?>
-        <?php echo theme_css('custom.css'); ?>
+        <?= theme_css('custom.css'); ?>
         <?=core_css("core/css/extras/animate.min.css");?>
         <style>.error { color:red; }</style>
           <!-- /global stylesheets -->
@@ -48,7 +49,7 @@
         <!-- Theme JS files -->
         <?php echo core_js('core/js/plugins/ui/nicescroll.min.js'); ?>
         <?php echo core_js('core/js/core/app.js'); ?>
-        <?php echo core_js('core/js/plugins/forms/selects/select2.min.js'); ?>
+       
         <?php echo core_js('core/js/pages/layout_fixed_custom.js'); ?>
         <?php echo core_js('core/js/plugins/ui/ripple.min.js'); ?>
         <!-- /theme JS files -->
@@ -218,14 +219,14 @@
     </div>
     <!-- /page container -->
     <!-- scripts -->
-
+    <?=base_url('plugins/forms/styling/uniform.min.js');?>
     <?php echo core_js('core/js/plugins/ui/moment/moment.min.js'); ?>
     <?php echo core_js('core/js/plugins/ui/fullcalendar/fullcalendar.min.js'); ?>
     <?php echo core_js('core/js/plugins/visualization/echarts/echarts.js'); ?>
     <?php echo core_js('core/js/plugins/forms/selects/bootstrap_multiselect.js'); ?>
     <script>
      // Default initialization
-     $('.search-select').select2({
+     $('.select').select2({
          minimumResultsForSearch: Infinity
      });
      $('.multiselect').multiselect({
