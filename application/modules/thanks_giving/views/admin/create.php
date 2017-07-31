@@ -73,11 +73,9 @@
                             </th>
                         </tr>
                     </thead>
-                </table>
-                <div id="entry1" class="clonedInput">	
-                    <table class="table table-striped table-bordered table-hover" >
+                
                         <tbody>
-                            <tr>
+                            <tr id="entry1" class="clonedInput">
                                 <td width="3%">
                                     <span id="reference" name="reference" class="heading-reference">1</span>
                                 </td>
@@ -120,7 +118,7 @@
 <script>
      $(function ()
      {
-          $('.select').select2({'width': '100%'});
+          //$('.select')..selectpicker();
           $('#btnAdd').click(function ()
           {
                //$('input.timepicker').eq(0).clone().removeClass("hasTimepicker").prependTo('#entry2');
@@ -138,7 +136,7 @@
                $('#entry' + num).after(newElem);
                /**** ******BEGIN SELECT2 CLONE**************/
                newElem.find('.select2-container').remove();
-               newElem.find('select').select2({'width': '100%'});
+               newElem.find('select').addClass('form-control');
                /*********END SELECT2 CLONE*****************/
                // enable the "remove" button
                $('#btnDel').attr('disabled', false);

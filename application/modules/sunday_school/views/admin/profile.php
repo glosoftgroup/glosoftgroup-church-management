@@ -2,7 +2,7 @@
 
 <div class="clearfix"></div>
 
-
+<div class="panel panel-white">
 <div class="panel-heading">
     <i class="icon-external-link-sign"></i>
     <h3 class="panel-title">Child Profile </h3>
@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>   
-<div class="tabbable">
+<div class="panel-body tabbable">
     <ul class="nav nav-tabs tab-padding tab-space-3 tab-blue" id="myTab4">
 
         <li class="active ">

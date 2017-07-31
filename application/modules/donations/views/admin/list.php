@@ -626,7 +626,7 @@
                         <label class='col-sm-3 control-label' for='value'>Value<span class='required'>*</span> </label>
                         <div class="col-sm-8 input-group">
                             <span class="input-group-addon"> <i class="clip-database"></i> </span>
-<?php echo form_input('value', $p->value, 'id="value_"  class="form-control" placeholder="If Merchandise or Service offered" '); ?><i style="color:red"><?php echo form_error('value'); ?></i>
+<?php echo form_input('value', '', 'id="value_"  class="form-control" placeholder="If Merchandise or Service offered" '); ?><i style="color:red"><?php echo form_error('value'); ?></i>
                         </div>
                         <div class="clearfix"></div>
                     </div>

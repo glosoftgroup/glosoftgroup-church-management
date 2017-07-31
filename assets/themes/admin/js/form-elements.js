@@ -8,9 +8,9 @@ var FormElements = function () {
         });
     };
     //function to initiate query.autosize    
-    /* var runAutosize = function () {
+     var runAutosize = function () {
         $("textarea.autosize").autosize();
-    };*/
+    };
     //function to initiate Select2
     var runSelect2 = function () {
         $(".search-select").select2({
@@ -82,7 +82,7 @@ var FormElements = function () {
         //main function to initiate template pages
         init: function () {
             runInputLimiter();
-            //runAutosize();
+            runAutosize();
             runSelect2();
             runMaskInput();
             runDatePicker();

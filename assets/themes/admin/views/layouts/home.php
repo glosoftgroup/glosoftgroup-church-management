@@ -136,873 +136,103 @@
                     <?php } ?>
                 </div>
                 <!-- /page header -->
- <?=core_css('icons/icomoon/styles.css');?>
+
                 <!-- Content area -->
                 <div class="content">
 
                     <!-- Detached content -->
                     <div class="container-detached">
                         <div class="content-detached">
-                           <div class="category-content">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <button class="btn bg-teal-400 btn-block btn-float btn-float-lg" type="button"><i class="fa fa-user"></i> <span>Branch</span></button>
-                                        <button class="btn bg-purple-300 btn-block btn-float btn-float-lg" type="button"><i class="icon-mail-read"></i> <span>Messages</span></button>
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <button class="btn bg-teal-400 btn-block btn-float btn-float-lg" type="button"><i class="fa fa-user"></i> <span>Branch</span></button>
-                                        <button class="btn bg-purple-300 btn-block btn-float btn-float-lg" type="button"><i class="icon-mail-read"></i> <span>Messages</span></button>
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <button class="btn bg-teal-400 btn-block btn-float btn-float-lg" type="button"><i class="fa fa-user"></i> <span>Branch</span></button>
-                                        <button class="btn bg-purple-300 btn-block btn-float btn-float-lg" type="button"><i class="icon-mail-read"></i> <span>Messages</span></button>
-                                    </div>
-                                    
-                                    <div class="col-xs-3">
-                                        <button class="btn bg-warning-400 btn-block btn-float btn-float-lg" type="button"><i class="icon-stats-bars"></i> <span>Statistics</span></button>
-                                        <button class="btn bg-blue btn-block btn-float btn-float-lg" type="button"><i class="icon-people"></i> <span>Users</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Info alert -->
-                            <div class="alert alert-info alert-styled-left alert-arrow-left alert-component">
-                                <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
-                                <h6 class="alert-heading text-semibold">Sticky with custom scroll</h6>
-                                If detached sidebar is sticked to the top and its content is higher than page height, vertical scrollbar appears. You can use <code>custom</code> styled scrollbar to make it sexy.
-                            </div>
-                            <!-- /info alert -->
-
-
-                            <!-- Sidebars overview -->
-                            <div class="panel panel-flat">
+                        <!-- My messages -->
+                            <div class="panel panel-flat border-bottom-lg border-bottom-primary">
                                 <div class="panel-heading">
-                                    <h5 class="panel-title">Sidebars overview</h5>
+                                    <h6 class="panel-title">Dashboard overview & stats</h6>
                                     <div class="heading-elements">
-                                        <ul class="icons-list">
-                                            <li><a data-action="collapse"></a></li>
-                                            <li><a data-action="reload"></a></li>
-                                            <li><a data-action="close"></a></li>
-                                        </ul>
+                                        <div class="btn-group">
+
+                                            <button class=" btn btn-sm  
+                                            <?php
+                                                $bal = $this->portal_m->get_counter_balance();
+                                                if ($bal->balance > 5)
+                                                     echo 'btn-beige';
+                                                else
+                                                     echo 'btn-danger';
+                                            ?>">
+                                                <i class=' clip-question-2'></i> NOTE
+                                            </button> 
+
+                                            <button class="btn btn-sm btn-dark-grey">Your SMS Account Balance is <span style="text-decoration:underline;
+                                                                                                                       font-weight:bold;"><?php echo $bal->balance; ?></span> SMS</button>
+
+                                        </div>
+                                        <span class="heading-text"><i class="glyphicon glyphicon-repeat text-warning position-left"></i> Jul 7, 10:30</span>
+                                        <span class="label bg-success heading-text">Online</span>
                                     </div>
                                 </div>
 
-                                <div class="panel-body">
-                                    <p class="content-group">Sidebar - vertical area that displays onscreen and presents widget components and website navigation menu in a text-based hierarchical form. All sidebars are css-driven - just add one of css classes to the <code>body</code> tag and/or <code>.sidebar</code> container, and sidebar will change its width and color. No js, css only. Although sidebar type is based on css, buttons do their job with jQuery - they switch necessary classes in <code>&lt;body></code> tag. Below you'll find summarized tables with all available <code>button</code> and sidebar container classes. By default the template includes 6 different sidebar types and combinations:</p>
-
-                                    <div class="content-group">
-                                        <h6 class="text-semibold">1. Default sidebar</h6>
-                                        <p>Default template sidebar has <code>260px</code> width, aligned to the left (to the right in RTL version) and has dark blue background color. All navigation levels are based on accordion <strong>or</strong> collapsible functionality, open on click. Supports 2 versions: static and fixed. Fixed version can be used with native or custom scrollbars.</p>
-                                    </div>
-
-                                    <div class="content-group">
-                                        <h6 class="text-semibold">2. Mini sidebar</h6>
-                                        <p>Mini sidebar has <code>56px</code> width, no text in parent level of menu items, aligned to the left (to the right in RTL version) and has dark blue background color. Second navigation level opens on parent level hover, absolute positioned, other children levels are based on accordion or collapsible functionality, open on click. It is <strong>required</strong> to add <code>.sidebar-xs</code> class to the <code>&lt;body></code> tag. This class is responsible for sidebar width and main navigation. By default all components except main navigation are hidden in mini sidebar.</p>
-                                    </div>
-
-                                    <div class="content-group">
-                                        <h6 class="text-semibold">3. Dual sidebar</h6>
-                                        <p>Main sidebar has <code>260px</code> width or <code>56px</code> (if <code>.sidebar-xs</code> class added). Secondary sidebar has fixed width of <code>260px</code>, which is identical to default and opposite sidebars, so different sidebar components can be placed to all these sidebars. Main and secondary sidebars can contain any content - menu, navigation, buttons, lists, tabs etc. In this type of sidebar only main sidebar is collapsible.</p>
-                                    </div>
-
-                                    <div class="content-group">
-                                        <h6 class="text-semibold">4. Double sidebar</h6>
-                                        <p>Double sidebar includes additional sidebar displayed on the opposite side of the main sidebar. It has a static position, appears as an additional component with 100% height and pushes content left/right. There are 2 different ways of displaying alternative sidebar: first - when it collapses main sidebar from default to mini width and second - when it hides the main sidebar. For these actions are responsible 2 different buttons - <code>.sidebar-opposite-toggle</code> and <code>.sidebar-opposite-fix</code>.</p>
-                                    </div>
-
-                                    <div class="content-group">
-                                        <h6 class="text-semibold">5. Dual double sidebar</h6>
-                                        <p>Dual and Double sidebars can be used together, so basically it is a 4 column layout. When opposite sidebar is shown, additional options are available: hide main sidebar, hide secondary sidebar, hide all sidebars or collapse main sidebar width. Since opposite sidebar is hidden by default, by manipulating classes you can display all 4 sidebars at once. Options are accessible via proper button and/or body classes.</p>
-                                    </div>
-
-                                    <div class="content-group">
-                                        <h6 class="text-semibold">6. Detached sidebar</h6>
-                                        <p>Sidebar usually is not a part of content and mainly used for navigation. Limitless allows you to use sidebar outside and inside content area. Detached sidebar isn't based on grid and has the same width as other sidebars, this means all sidebar components can be placed inside detached sidebar. Supports left and right positioning.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /sidebars overview -->
-
-
-                            <!-- Button classes -->
-                            <div class="panel panel-flat">
-                                <div class="panel-heading">
-                                    <h5 class="panel-title">Button classes</h5>
-                                    <div class="heading-elements">
-                                        <ul class="icons-list">
-                                            <li><a data-action="collapse"></a></li>
-                                            <li><a data-action="reload"></a></li>
-                                            <li><a data-action="close"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="panel-body">
-                                    <h6 class="text-semibold">Overview</h6>
-                                    <p class="content-group">This table displays all optional <code>button</code> classes, responsible for the sidebar appearance. Depending on the sidebar type, add one of these classes to any button or link and this element will handle sidebar control. Multiple controls are also available - add as many sidebar controls as you wish. Pleas note: these classes don't change sidebar markup, only its CSS.</p>
-                                    <div class="table-responsive content-group-lg">
-                                        <table class="table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th style="width: 300px;">Button class</th>
-                                                    <th>Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><code>.sidebar-main-toggle</code></td>
-                                                    <td>Collapsible sidebar. Changes main sidebar width from default to mini. This button is added to all pages by default.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-main-hide</code></td>
-                                                    <td>Hides and shows <code>main</code> sidebar. Used mostly in dual sidebar type to hide main sidebar. In other layouts this button does the same job as <code>.sidebar-hide-all</code> button.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-all-hide</code></td>
-                                                    <td>Hideable sidebar. Hides and shows <code>main</code> sidebar. Works with all sidebar types, except opposite sidebar.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-opposite-fix</code></td>
-                                                    <td>Double sidebar with fixed width. If alt sidebar is shown, main sidebar stays the same and doesn't change the width.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-opposite-toggle</code></td>
-                                                    <td>Collapsible double sidebar. If opposite sidebar is shown, main sidebar changes its width from default to mini. Works with all sidebar types - single and dual.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-opposite-main-hide</code></td>
-                                                    <td>Hides and shows <code>main</code> sidebar in dual sidebar layout. If opposite sidebar is shown, main sidebar is hidden. This works only in dual double sidebar version of layout.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-secondary-hide</code></td>
-                                                    <td>Hides/shows <code>secondary</code> sidebar in dual sidebar layout. Secondary sidebar supports only toggle functionality and always has fixed width of <code>260px</code>.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-opposite-secondary-hide</code></td>
-                                                    <td>Hides/shows <code>secondary</code> sidebar in dual sidebar layout. If opposite sidebar is shown, secondary sidebar is hidden. This works only in dual double sidebar version of layout.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-opposite-hide</code></td>
-                                                    <td>Hides/shows <code>all</code> sidebars when opposite sidebar is shown. If opposite sidebar is shown, all sidebars are hidden. This works in all layout types.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-detached-hide</code></td>
-                                                    <td>Hides/shows <code>detached</code> sidebars. Detached sidebars aren't connected with other sidebars, so this is the only button that controls its visibility.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                                    <h6 class="text-semibold">Example Markup</h6>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <p>Default placement of sidebar control buttons is top navbar:</p>
-                                            <pre class="language-markup content-group" data-line="7-11"><code>&lt;!-- Navbar placement -->
-&lt;div class="navbar navbar-inverse">
-    &lt;div class="navbar-header">...&lt;/div>
-    &lt;ul class="nav navbar-nav">
-        &lt;li>
-            &lt;a class="sidebar-main-toggle">
-                &lt;i class="icon-menu">&lt;/i>
-            &lt;/a>
-        &lt;/li>
-    &lt;/ul>
-&lt;/div>
-&lt;!-- /navbar placement -->
-</code></pre>
+                                <!-- Numbers -->
+                                <div class="container-fluid">
+                                    <div class="row text-center">
+                                        <div class="col-md-2">
+                                           <a href="<?php echo base_url('admin/members'); ?>">
+                                            <div class="content-group">
+                                                <h6 class="text-semibold no-margin"><i class="icon-group circle-icon circle-green  position-left text-slate"></i> <strong><?php echo number_format($members_count); ?></strong></h6>
+                                                <span class="text-muted text-size-small">all members</span>
+                                            </div>
+                                            </a>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <p>Here is an example of button inside panel heading:</p>
-                                            <pre class="language-markup content-group" data-line="6-9"><code>&lt;!-- Panel heading placement -->
-&lt;div class="panel panel-default">
-    &lt;div class="panel-heading">
-        &lt;h5 class="panel-title">Panel title&lt;/h5>
-        &lt;div class="heading-elements">
-            &lt;button type="button" class="sidebar-main-toggle">
-                &lt;i class="icon-menu">&lt;/i>
-                Collapse sidebar
-            &lt;/button>
-        &lt;/div>
-    &lt;/div>
-    &lt;div class="panel-body">...&lt;/div>
-&lt;/div>
-&lt;!-- /panel heading placement -->
-</code></pre>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                            <!-- /button classes -->
-
-
-                            <!-- Sidebar classes -->
-                            <div class="panel panel-flat">
-                                <div class="panel-heading">
-                                    <h5 class="panel-title">Sidebar classes</h5>
-                                    <div class="heading-elements">
-                                        <ul class="icons-list">
-                                            <li><a data-action="collapse"></a></li>
-                                            <li><a data-action="reload"></a></li>
-                                            <li><a data-action="close"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="panel-body">
-                                    <h6 class="text-semibold">Overview</h6>
-                                    <p class="content-group">This table demonstrates all classes for <code>sidebar</code> container, responsible for the sidebar width and color. Almost all these classes are mandatory, some of them are responsible for proper styling or have a specific code attached to this class (like <code>.sidebar-main</code> class, which has collapsible functionality attached). All classes can be combined depending on the type of sidebar:</p>
-                                    <div class="table-responsive content-group-lg">
-                                        <table class="table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th style="width: 300px">Body class</th>
-                                                    <th>Description</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><code>.sidebar</code></td>
-                                                    <td>Default sidebar class, should be added in all layout types.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-main</code></td>
-                                                    <td>Defines main sidebar. Mini sidebar <code>.sidebar-xs</code> class takes effect only if class <code>.sidebar-main</code> specified. By default all components except main navigation are hidden in mini sidebar.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-secondary</code></td>
-                                                    <td>Defines secondary sidebar in dual sidebar layout. Has fixed <code>260px</code> width.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-opposite</code></td>
-                                                    <td>Defines opposite sidebar in double sidebar layout. Has fixed <code>260px</code> width and appears on the opposite side from the main sidebar.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-default</code></td>
-                                                    <td>Defines light sidebar. This class can be applied to all sidebar types and positions.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar.bg-*</code></td>
-                                                    <td>Defines sidebar background color. According to the custom color system, sidebar background color can be changed to one of the available colors by adding a proper class to the main sidebar container.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-detached</code></td>
-                                                    <td>Needs to be added to the parent container. Also requires <code>.has-detached-left</code> or <code>.has-detached-right</code> added to the <code>&lt;body></code> tag.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>.sidebar-separate</code></td>
-                                                    <td>Removes background and border from sidebar and displays categories as separate widgets. Mainly used with detached sidebar.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                                    <h6 class="text-semibold">Example Markup</h6>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <p>Default left aligned sidebar markup:</p>
-                                            <pre class="language-markup content-group" data-line="2"><code>&lt;!-- Default sidebar layout -->
-&lt;body>
-
-    &lt;!-- Page container -->
-    &lt;div class="page-container">
-
-        &lt;!-- Page content -->
-        &lt;div class="page-content">
-
-            &lt;!-- Main sidebar -->
-            &lt;div class="sidebar sidebar-main">
-                &lt;div class="sidebar-content">...&lt;/div>
-            &lt;/div>
-            &lt;!-- /main sidebar -->
-
-            &lt;!-- Main content -->
-            &lt;div class="content-wrapper">...&lt;/div>
-            &lt;!-- /main content -->
-
-        &lt;/div>
-        &lt;!-- /page content -->
-
-    &lt;/div>
-    &lt;!-- /page container -->
-
-&lt;/body>
-&lt;!-- /default sidebar layout -->
-</code></pre>
-
+                                        <div class="col-md-2">
+                                           <a href="<?php echo base_url('admin/visitors'); ?>">
+                                            <div class="content-group">
+                                                <h6 class="text-semibold no-margin"><i class="clip-thumbs-up circle-icon circle-green position-left text-slate"></i> <strong><?php echo number_format($visitors_count); ?></strong></h6>
+                                                <span class="text-muted text-size-small">all visitors</span>
+                                            </div>
+                                           </a>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <p>Mini sidebar markup. The only difference is <code>&lt;body></code> class:</p>
-                                            <pre class="language-markup content-group" data-line="2"><code>&lt;!-- Mini sidebar layout -->
-&lt;body class="sidebar-xs">
-
-    &lt;!-- Page container -->
-    &lt;div class="page-container">
-
-        &lt;!-- Page content -->
-        &lt;div class="page-content">
-
-            &lt;!-- Main sidebar -->
-            &lt;div class="sidebar sidebar-main">
-                &lt;div class="sidebar-content">...&lt;/div>
-            &lt;/div>
-            &lt;!-- /main sidebar -->
-
-            &lt;!-- Main content -->
-            &lt;div class="content-wrapper">...&lt;/div>
-            &lt;!-- /main content -->
-
-        &lt;/div>
-        &lt;!-- /page content -->
-
-    &lt;/div>
-    &lt;!-- /page container -->
-
-&lt;/body>
-&lt;!-- /mini sidebar layout -->
-</code></pre>
+                                        <div class="col-md-2">
+                                          <a href="<?php echo base_url('admin/sunday_school'); ?>">
+                                            <div class="content-group">
+                                                <h6 class="text-semibold no-margin"><i class="clip-users circle-icon circle-green position-left text-slate"></i> <strong><?php echo number_format($ss_count); ?></strong></h6>
+                                                <span class="text-muted text-size-small">sunday school</span>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="content-group">
+                                                <h6 class="text-semibold no-margin"><i class="icon-list-ul circle-icon circle-teal  position-left text-slate"></i> <strong><?php echo number_format($hbcs_count); ?></strong></h6>
+                                                <span class="text-muted text-size-small">all HBCS</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                         <a href="<?php echo base_url('admin/ministries'); ?>">
+                                            <div class="content-group">
+                                                <h6 class="text-semibold no-margin"><i class="icon-comments position-left text-slate"></i> <strong><?php echo number_format($ministries_count); ?></strong></h6>
+                                                <span class="text-muted text-size-small">all ministries</span>
+                                            </div>
+                                         </a>
+                                        </div>
+                                        <div class="col-md-2">
+                                          <a href="<?php echo base_url('admin/users'); ?>">
+                                            <div class="content-group">
+                                                <h6 class="text-semibold no-margin"><i class="clip-users-2 circle-icon circle-black position-left text-slate"></i> <strong><?php echo number_format($users_count); ?></strong></h6>
+                                                <span class="text-muted text-size-small">all users</span>
+                                            </div>
+                                         </a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- /sidebar classes -->
-
-                        </div>
-                    </div>
-                    <!-- /detached content -->
-
-
-                    <!-- Detached sidebar -->
-                    <div class="sidebar-detached">
-                        <div class="sidebar sidebar-default">
-                            <div class="sidebar-content">
-
-                                <!-- Sidebar search -->
-                                <div class="sidebar-category">
-                                    <div class="category-title">
-                                        <span>Search</span>
-                                        <ul class="icons-list">
-                                            <li><a href="sidebar_detached_sticky_custom.html#" data-action="collapse"></a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="category-content">
-                                        <form action="#">
-                                            <div class="has-feedback has-feedback-left">
-                                                <input type="search" class="form-control" placeholder="Search">
-                                                <div class="form-control-feedback">
-                                                    <i class="icon-search4 text-size-base text-muted"></i>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
+                                <!-- /numbers -->
                                 </div>
-                                <!-- /sidebar search -->
-
-
-                                <!-- Action buttons -->
-                                <div class="sidebar-category">
-                                    <div class="category-title">
-                                        <span>Action buttons</span>
-                                        <ul class="icons-list">
-                                            <li><a href="sidebar_detached_sticky_custom.html#" data-action="collapse"></a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="category-content">
-                                        <div class="row">
-                                            <div class="col-xs-6">
-                                                <button class="btn bg-teal-400 btn-block btn-float btn-float-lg" type="button"><i class="icon-git-branch"></i> <span>Branch</span></button>
-                                                <button class="btn bg-purple-300 btn-block btn-float btn-float-lg" type="button"><i class="icon-mail-read"></i> <span>Messages</span></button>
-                                            </div>
-                                            
-                                            <div class="col-xs-6">
-                                                <button class="btn bg-warning-400 btn-block btn-float btn-float-lg" type="button"><i class="icon-stats-bars"></i> <span>Statistics</span></button>
-                                                <button class="btn bg-blue btn-block btn-float btn-float-lg" type="button"><i class="icon-people"></i> <span>Users</span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /action buttons -->
-
-
-                                <!-- Sub navigation -->
-                                <div class="sidebar-category">
-                                    <div class="category-title">
-                                        <span>Navigation</span>
-                                        <ul class="icons-list">
-                                            <li><a href="sidebar_detached_sticky_custom.html#" data-action="collapse"></a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="category-content no-padding">
-                                        <ul class="navigation navigation-alt navigation-accordion">
-                                            <li class="navigation-header">Actions</li>
-                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-googleplus5"></i> Create task</a></li>
-                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-portfolio"></i> Create project</a></li>
-                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-portfolio"></i> Create project</a>
-                                                <ul>
-                                                    <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-googleplus5"></i> Create task</a></li>
-                                                    <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-googleplus5"></i> Create task</a></li>
-                                                    <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-googleplus5"></i> Create task</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-compose"></i> Edit task list</a></li>
-                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-user-plus"></i> Assign users <span class="label label-primary">94 online</span></a></li>
-                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-collaboration"></i> Create team</a></li>
-                                            <li class="navigation-header">Navigate</li>
-                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-files-empty"></i> All tasks</a></li>
-                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-file-plus"></i> Active tasks <span class="badge badge-default">28</span></a></li>
-                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-file-check"></i> Closed tasks</a></li>
-                                            <li class="navigation-divider"></li>
-                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-reading"></i> Assigned to me <span class="badge badge-info">86</span></a></li>
-                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-make-group"></i> Assigned to my team <span class="badge badge-danger">47</span></a></li>
-                                            <li class="navigation-divider"></li>
-                                            <li><a href="sidebar_detached_sticky_custom.html#"><i class="icon-cog3"></i> Settings</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- /sub navigation -->
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /detached sidebar -->
-
-
-                    <!-- Footer -->
-                    <div class="footer text-muted">
-                        &copy; 2015. <a href="sidebar_detached_sticky_custom.html#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
-                    </div>
-                    <!-- /footer -->
-
-                </div>
-                <!-- /content area -->
-                
-                
-                <!-- Content area -->
-                <div class="content">
-         <!-- modal -->
-         <!-- start: PANEL CONFIGURATION MODAL FORM -->
-            <div class="modal fade" id="panel-config" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                &times;
-                            </button>
-                            <h4 class="modal-title">Panel Configuration</h4>
-                        </div>
-                        <div class="modal-body">
-                            Here will be a configuration form
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">
-                                Close
-                            </button>
-                            <button type="button" class="btn btn-primary">
-                                Save changes
-                            </button>
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-            <!-- /.modal -->
-            <!-- end: SPANEL CONFIGURATION MODAL FORM -->
-          <div class="row">
-           <!-- start: PAGE -->
-        <div class="main-content">
-            <!-- start: PANEL CONFIGURATION MODAL FORM -->
-            <div class="modal fade" id="panel-config" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                &times;
-                            </button>
-                            <h4 class="modal-title">Panel Configuration</h4>
-                        </div>
-                        <div class="modal-body">
-                            Here will be a configuration form
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">
-                                Close
-                            </button>
-                            <button type="button" class="btn btn-primary">
-                                Save changes
-                            </button>
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-            <!-- /.modal -->
-            <!-- end: SPANEL CONFIGURATION MODAL FORM -->
-            <div class="container">
-                <!-- start: PAGE HEADER -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <?php
-                        if ($this->acl->is_allowed(array('offerings')))
-                        {
-                                ?>
-                                <!-- start: STYLE SELECTOR BOX -->
-                                <div id="style_selector">
-                                    <div id="style_selector_container" style="display:block">
-                                        <div class="style-main-title">
-                                            Contribution For
-                                            <?php echo date('M Y', time()); ?>
-                                        </div>
-
-                                        <div class="col-sm-12">
-                                            <div class="easy-pie-chart">
-                                                <a href="<?php echo site_url('admin/offerings') ?>">
-                                                    <div class="label-chart col-sm-7">
-                                                        Total Offerings <br><br>
-                                                        <span class="added">KES <?php echo number_format($total_offering->total) ?></span>
-                                                    </div>
-                                                    <br>
-
-                                                    <div class="sparkline_bar_good col-sm-5 spkx">
-
-                                                        <span>
-                                                            <?php
-                                                            foreach ($offerings as $p)
-                                                            {
-                                                                    echo $p->amount . ',';
-                                                            }
-                                                            ?>
-                                                        </span>
-                                                    </div>
-
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-
-                                        <div class="col-sm-12">
-                                            <div class="easy-pie-chart">
-                                                <a href="<?php echo site_url('admin/tithes') ?>">
-                                                    <div class="label-chart col-sm-7">
-                                                        Total Tithes <br><br>
-                                                        <span class="added">KES <?php echo number_format($total_tithes->total) ?></span>
-                                                    </div>
-                                                    <br>
-
-                                                    <div class="sparkline_bar_good col-sm-5 spkx">
-
-                                                        <span><?php
-                                                            foreach ($tithes as $p)
-                                                            {
-                                                                    echo $p->totals . ',';
-                                                            }
-                                                            ?></span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="col-sm-12">
-                                            <div class="easy-pie-chart">
-                                                <a href="<?php echo site_url('admin/thanks_giving') ?>">
-                                                    <div class="label-chart col-sm-7">
-                                                        Total Thanks Giving <br><br>
-                                                        <span class="added">KES <?php echo number_format($total_thanks->total) ?></span>
-                                                    </div>
-                                                    <br>
-
-                                                    <div class="sparkline_bar_good col-sm-5 spkx">
-
-                                                        <span><?php
-                                                            foreach ($thanks as $p)
-                                                            {
-                                                                    echo $p->totals . ',';
-                                                            }
-                                                            ?></span> 
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-
-                                        <div class="col-sm-12">
-                                            <div class="easy-pie-chart">
-                                                <a href="<?php echo site_url('admin/ministry_support') ?>">
-                                                    <div class="label-chart col-sm-7">
-                                                        Total Ministry Support <br><br>
-                                                        <span class="added">KES <?php echo number_format($total_support->total) ?></span>
-                                                    </div>
-                                                    <br>
-
-                                                    <div class="sparkline_bar_good col-sm-5 spkx">
-
-                                                        <span><?php
-                                                            foreach ($support as $p)
-                                                            {
-                                                                    echo $p->totals . ',';
-                                                            }
-                                                            ?></span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-
-                                        <div class="col-sm-12">
-                                            <div class="easy-pie-chart">
-                                                <a href="<?php echo site_url('admin/seed_planting') ?>">
-                                                    <div class="label-chart col-sm-7">
-                                                        Total Seed Planting <br><br>
-                                                        <span class="added">KES <?php echo number_format($total_seeds->total) ?></span>
-                                                    </div>
-                                                    <br>
-
-                                                    <div class="sparkline_bar_good col-sm-5 spkx">
-
-                                                        <span><?php
-                                                            foreach ($seeds as $p)
-                                                            {
-                                                                    echo $p->totals . ',';
-                                                            }
-                                                            ?></span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-
-                                        <div class="col-sm-12">
-                                            <div class="easy-pie-chart">
-                                                <a href="<?php echo site_url('admin/other_contributions') ?>">
-                                                    <div class="label-chart col-sm-7">
-                                                        Other Contributions <br><br>
-                                                        <span class="added">KES <?php echo number_format($total_others->total) ?></span>
-                                                    </div>
-                                                    <br>
-
-                                                    <div class="sparkline_bar_good col-sm-4 spkx">
-
-                                                        <span><?php
-                                                            foreach ($others as $p)
-                                                            {
-                                                                    echo $p->totals . ',';
-                                                            }
-                                                            ?></span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <hr>
-                                        <div class="col-sm-12">
-                                            <div class="easy-pie-chart">
-
-                                                <div class="label-chart col-sm-7">
-                                                    Subtotal <br><br>
-                                                    <span class="added">
-                                                        KES
-                                                        <?php
-                                                        $totals = ($total_offering->total + $total_tithes->total + $total_thanks->total + $total_support->total + $total_seeds->total + $total_others->total);
-                                                        echo number_format($totals, 2);
-                                                        ?>
-                                                    </span>
-                                                </div>
-                                                <span class="cpu number col-sm-5" data-percent="90"> <span class="icon-thumbs-up"></span>
-                                                    <span class="clip-data"></span> </span>
-
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                    <div class="style-toggle open"></div>
-                                </div>
-                                <!-- end: STYLE SELECTOR BOX -->
-                        <?php } ?>
-                        <!-- start: PAGE TITLE & BREADCRUMB -->
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="clip-home-3"></i>
-                                <a href="#">
-                                    Home
-                                </a>
-                            </li>
-                            <li class="active">
-                                Dashboard
-                            </li>
-                            <li class="search-box">
-                                <form class="sidebar-search">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Start Searching...">
-                                        <button class="submit">
-                                            <i class="clip-search-3"></i>
-                                        </button>
-                                    </div>
-                                </form>
-                            </li>
-                        </ol>
-                        <div class="page-header">
-                            <h1>Dashboard <small>overview &amp; stats </small></h1>
-                        </div>
-                        <!-- end: PAGE TITLE & BREADCRUMB -->
-                    </div>
-                </div>
-                <!-- end: PAGE HEADER -->
-                <!-- start: PAGE CONTENT -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="panel-body">
-
-                            <?php
-                            if ($this->session->flashdata('warning'))
-                            {
-                                    ?>
-                                    <div class="alert">
-                                        <button type="button" class="close" data-dismiss="alert">                                    
-                                            <i class="icon-remove"></i>                                </button>
-                                        <strong>Warning!</strong> <?php echo $this->session->flashdata('warning'); ?>
-                                    </div>
-                            <?php } ?> 
-                            <?php
-                            if ($this->session->flashdata('warning'))
-                            {
-                                    ?>
-                                    <div class="alert">
-                                        <button type="button" class="close" data-dismiss="alert">                                    
-                                            <i class="icon-remove"></i>                                </button>
-                                        <strong>Warning!</strong> <?php echo $this->session->flashdata('warning'); ?>
-                                    </div>
-                            <?php } ?>
-                            <?php
-                            if ($this->session->flashdata('success'))
-                            {
-                                    ?>
-                                    <div class="alert alert-success">
-                                        <button type="button" class="close" data-dismiss="alert">  <i class="icon-remove"></i>  </button>
-                                        <?php echo $this->session->flashdata('success'); ?>
-                                    </div>
-                            <?php } ?>
-                            <?php
-                            if ($this->session->flashdata('info'))
-                            {
-                                    ?>
-                                    <div class="alert alert-info">
-                                        <button type="button" class="close" data-dismiss="alert">                                    
-                                            <i class="icon-remove"></i>                                </button>
-                                        <?php echo $this->session->flashdata('info'); ?>
-                                    </div>
-                            <?php } ?>
-                            <?php
-                            if ($this->session->flashdata('message'))
-                            {
-                                    $message = $this->session->flashdata('message');
-                                    $str = is_array($message) ? $message['text'] : $message;
-                                    ?>
-                                    <div class="alert alert-success">
-                                        <button type="button" class="close" data-dismiss="alert">                                   
-                                            <i class="icon-remove"></i>                                </button>
-                                        <i class="icon-thumbs-up"></i> <?php echo $str; //$this->session->flashdata('message');      ?>
-                                    </div>
-                            <?php } ?>
-                            <?php
-                            if ($this->session->flashdata('error'))
-                            {
-                                    $mess = $this->session->flashdata('error');
-                                    $strr = is_array($mess) ? $mess['text'] : $mess;
-                                    ?>
-                                    <div class="alert alert-danger">
-                                        <button type="button" class="close" data-dismiss="alert">                                   
-                                            <i class="icon-remove"></i>                                </button>
-                                        <i class="icon-warning-sign"></i> <?php echo $strr; ?>
-                                    </div>
-                            <?php } ?>
+                          
+                          
                             
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="row space12">
-
-                            <ul class="mini-stats col-sm-12">
-                                <li class="col-sm-2 ">
-                                    <a href="<?php echo base_url('admin/members'); ?>">
-                                        <i class="icon-group circle-icon circle-green col-sm-5 "></i>
-                                        <div class="values alert alert-success col-sm-7">
-                                            <strong><?php echo number_format($members_count); ?></strong>
-                                            All Members
-                                        </div>
-                                    </a>    
-                                </li>
-                                <li class="col-sm-2">
-                                    <a href="<?php echo base_url('admin/visitors'); ?>">
-                                        <i class="clip-thumbs-up circle-icon circle-green col-sm-5"></i>
-                                        <div class="values alert alert-success fade in col-sm-7">
-                                            <strong><?php echo number_format($visitors_count); ?></strong>
-                                            All Visitors
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="col-sm-2">
-                                    <a href="<?php echo base_url('admin/sunday_school'); ?>">
-                                        <i class="clip-users circle-icon circle-green col-sm-5"></i>
-                                        <div class="values alert alert-success col-sm-7">
-                                            <strong><?php echo number_format($ss_count); ?></strong>
-                                            Sunday Sch.
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="col-sm-2">
-                                    <i class="icon-list-ul circle-icon circle-teal col-sm-5"></i>
-                                    <div class="values alert alert-info col-sm-7">
-                                        <strong><?php echo number_format($hbcs_count); ?></strong>
-                                        All HBCs
-
-                                    </div>
-                                    </a>
-                                </li>
-                                <li class="col-sm-2">
-                                    <a href="<?php echo base_url('admin/ministries'); ?>">
-                                        <i class="icon-list-ol circle-icon circle-teal col-sm-5"></i>
-                                        <div class="values alert alert-info col-sm-7">
-                                            <strong><?php echo number_format($ministries_count); ?></strong>
-                                            All Ministries
-
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="col-sm-2">
-                                    <a href="<?php echo base_url('admin/users'); ?>">
-                                        <i class="clip-users-2 circle-icon circle-black col-sm-5"></i>
-                                        <div class="values alert alert-warning col-sm-7">
-                                            <strong><?php echo number_format($users_count); ?></strong>
-                                            All Users
-
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <hr />
-                    </div>
-
-                </div>
-                <!-- END LISTING -->
-                <?php
-                if ($this->acl->is_allowed(array('offerings')))
-                {
-                        ?>
-                        <div class="row">
-                            <div class="col-md-6">
+                            <!-- dashboard panels -->
+                             <div class="row">
+                            <div class="col-md-12">
                                 <!-- start: CONDENSED TABLE PANEL -->
-                                <div class="panel panel-default">
+                                <div class="panel panel-white">
                                     <div class="panel-heading">
                                         <i class="icon-external-link-sign"></i>
                                         Recent Collections
@@ -1113,8 +343,8 @@
                                 <!-- end: CONDENSED TABLE PANEL -->
                             </div>
 
-                            <div class="col-sm-6">
-                                <div class="panel panel-default">
+                            <div class="col-sm-12">
+                                <div class="panel panel-white">
                                     <div class="panel-heading">
                                         <i class="clip-stats"></i>
                                         Contribution Flow For The Year <?php echo date('Y') ?>
@@ -1141,8 +371,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="panel panel-default">
+                            <div class="col-md-12">
+                                <div class="panel panel-white">
                                     <div class="panel-heading">
                                         <i class="icon-external-link-sign"></i>
                                         Pending Pledges
@@ -1247,8 +477,8 @@
 
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="panel panel-default">
+                            <div class="col-md-12">
+                                <div class="panel panel-white">
                                     <div class="panel-heading">
                                         <i class="icon-external-link-sign"></i>
                                         Recent Expenses
@@ -1346,11 +576,10 @@
 
                             </div>
                         </div>
-                        <!--END TABLES-->
-                <?php } ?>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="panel panel-default">
+                        
+                         <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-white">
                             <div class="panel-heading">
                                 <i class="clip-calendar"></i>
                                 Calendar
@@ -1377,9 +606,9 @@
                         </div>
 
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <!-- start: BORDERED TABLE PANEL -->
-                        <div class="panel panel-default">
+                        <div class="panel panel-white">
                             <div class="panel-heading">
                                 <i class="icon-external-link-sign"></i>
                                 Recent Registered Members
@@ -1491,6 +720,326 @@
                     </div>
 
                 </div>
+                            <!-- ./dashbaord panels -->
+
+                            
+                           
+
+
+
+                        </div>
+                    </div>
+                    <!-- /detached content -->
+
+
+                    <!-- Detached sidebar -->
+                    <div class="sidebar-detached">
+                        <div class="sidebar sidebar-default">
+                            <div class="sidebar-content">
+                               <!-- start: PAGE HEADER -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <?php
+                        if ($this->acl->is_allowed(array('offerings')))
+                        {
+                                ?>
+                                <!-- start: STYLE SELECTOR BOX -->
+                                <div class="panel panel-primary">
+                                  <div class="panel-heading">
+                                           <span> Contribution For
+                                            <?php echo date('M Y', time()); ?></span>
+                                    </div>
+                                    <div class="panel-body" style="display:block">
+ 
+  <ul class="media-list"> 
+    
+    <li class="media border-bottom-lg border-bottom">
+     <a class="text-slate" href="<?php echo site_url('admin/offerings') ?>">
+        <div class="media-left">
+            Total Offerings             
+        </div>
+        <div class="media-body text-right">
+            <span class="text-bold ">KES <?php echo number_format($total_offering->total) ?></span> 
+            <br>
+            <span class="text-muted">
+            <?php foreach ($offerings as $p)
+                {  echo $p->amount . ',';} ?>
+            </span>         
+        </div>
+          </a>
+    </li>
+
+    <li class="media border-bottom-lg border-bottom">
+     <a class="text-slate" href="<?php echo site_url('admin/tithes') ?>">
+        <div class="media-left">
+             Total Tithes            
+        </div>
+        <div class="media-body text-right">
+            <span class="text-bold ">KES <?php echo number_format($total_tithes->total) ?></span> 
+            <br>
+            <span class="text-muted">
+            <?php foreach ($tithes as $p)
+                {  echo $p->amount . ',';} ?>
+            </span>         
+        </div>
+          </a>
+    </li>
+   
+    
+    <li class="media border-bottom-lg border-bottom">
+     <a class="text-slate" href="<?php echo site_url('admin/thanks_giving') ?>">
+        <div class="media-left">
+            Total Thanks Giving            
+        </div>
+        <div class="media-body text-right">
+            <span class="text-bold ">KES <?php echo number_format($total_thanks->total) ?></span> 
+            <br>
+            <span class="text-muted">
+            <?php foreach ($thanks as $p)
+                {  echo $p->amount . ',';} ?>
+            </span>         
+        </div>
+          </a>
+    </li>
+    
+
+    <li class="media border-bottom-lg border-bottom">
+     <a class="text-slate" href="<?php echo site_url('admin/ministry_support') ?>">
+        <div class="media-left">
+             Total Ministry Support            
+        </div>
+        <div class="media-body text-right">
+            <span class="text-bold ">KES <?php echo number_format($total_support->total) ?></span> 
+            <br>
+            <span class="text-muted">
+            <?php foreach ($support as $p)
+                {  echo $p->amount . ',';} ?>
+            </span>         
+        </div>
+          </a>
+    </li>
+    <li class="media border-bottom-lg border-bottom">
+     <a class="text-slate" href="<?php echo site_url('admin/seed_planting') ?>">
+        <div class="media-left">
+             Total Seed Planting            
+        </div>
+        <div class="media-body text-right">
+            <span class="text-bold ">KES <?php echo number_format($total_seeds->total) ?></span> 
+            <br>
+            <span class="text-muted">
+            <?php foreach ($seeds as $p)
+                {  echo $p->amount . ',';} ?>
+            </span>         
+        </div>
+          </a>
+    </li>
+   
+    <li class="media border-bottom-lg border-bottom">
+     <a class="text-slate" href="<?php echo site_url('admin/other_contributions') ?>">
+        <div class="media-left">
+             Other Contributions             
+        </div>
+        <div class="media-body text-right">
+            <span class="text-bold ">KES <?php echo number_format($total_others->total) ?></span> 
+            <br>
+            <span class="text-muted">
+            <?php foreach ($others as $p)
+                {  echo $p->amount . ',';} ?>
+            </span>         
+        </div>
+          </a>
+    </li>
+
+    
+    
+   
+
+  </ul>
+
+</div>
+<div class="panel-footer panel-footer-condensed">
+ <div class="heading-elements">
+     <span class="heading-text">Subtotal </span>
+
+                <span class="heading-text pull-right text-bold ">
+                    KES
+                    <?php
+                    $totals = ($total_offering->total + $total_tithes->total + $total_thanks->total + $total_support->total + $total_seeds->total + $total_others->total);
+                    echo number_format($totals, 2);
+                    ?>
+ </div>
+    
+</div>
+                                </div>
+                                <!-- end: STYLE SELECTOR BOX -->
+                        <?php } ?>
+                        
+                       
+                    </div>
+                </div>
+                <!-- end: PAGE HEADER -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /detached sidebar -->
+
+
+                    <!-- Footer -->
+                    <div class="footer text-muted">
+                        &copy; <?php date('Y');?>. Glosoft Group<a href="#"></a>
+                    </div>
+                    <!-- /footer -->
+
+                </div>
+                <!-- /content area -->
+                
+                
+                <!-- Content area -->
+                <div class="content">
+         <!-- modal -->
+         <!-- start: PANEL CONFIGURATION MODAL FORM -->
+            <div class="modal fade" id="panel-config" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title">Panel Configuration</h4>
+                        </div>
+                        <div class="modal-body">
+                            Here will be a configuration form
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                                Save changes
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+            <!-- end: SPANEL CONFIGURATION MODAL FORM -->
+          <div class="row">
+           <!-- start: PAGE -->
+        <div class="main-content">
+            <!-- start: PANEL CONFIGURATION MODAL FORM -->
+            <div class="modal fade" id="panel-config" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title">Panel Configuration</h4>
+                        </div>
+                        <div class="modal-body">
+                            Here will be a configuration form
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                                Save changes
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+            <!-- end: SPANEL CONFIGURATION MODAL FORM -->
+            <div class="container">
+                
+                <!-- start: PAGE CONTENT -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel-body">
+
+                            <?php
+                            if ($this->session->flashdata('warning'))
+                            {
+                                    ?>
+                                    <div class="alert">
+                                        <button type="button" class="close" data-dismiss="alert">                                    
+                                            <i class="icon-remove"></i>                                </button>
+                                        <strong>Warning!</strong> <?php echo $this->session->flashdata('warning'); ?>
+                                    </div>
+                            <?php } ?> 
+                            <?php
+                            if ($this->session->flashdata('warning'))
+                            {
+                                    ?>
+                                    <div class="alert">
+                                        <button type="button" class="close" data-dismiss="alert">                                    
+                                            <i class="icon-remove"></i>                                </button>
+                                        <strong>Warning!</strong> <?php echo $this->session->flashdata('warning'); ?>
+                                    </div>
+                            <?php } ?>
+                            <?php
+                            if ($this->session->flashdata('success'))
+                            {
+                                    ?>
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert">  <i class="icon-remove"></i>  </button>
+                                        <?php echo $this->session->flashdata('success'); ?>
+                                    </div>
+                            <?php } ?>
+                            <?php
+                            if ($this->session->flashdata('info'))
+                            {
+                                    ?>
+                                    <div class="alert alert-info">
+                                        <button type="button" class="close" data-dismiss="alert">                                    
+                                            <i class="icon-remove"></i>                                </button>
+                                        <?php echo $this->session->flashdata('info'); ?>
+                                    </div>
+                            <?php } ?>
+                            <?php
+                            if ($this->session->flashdata('message'))
+                            {
+                                    $message = $this->session->flashdata('message');
+                                    $str = is_array($message) ? $message['text'] : $message;
+                                    ?>
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert">                                   
+                                            <i class="icon-remove"></i>                                </button>
+                                        <i class="icon-thumbs-up"></i> <?php echo $str; //$this->session->flashdata('message');      ?>
+                                    </div>
+                            <?php } ?>
+                            <?php
+                            if ($this->session->flashdata('error'))
+                            {
+                                    $mess = $this->session->flashdata('error');
+                                    $strr = is_array($mess) ? $mess['text'] : $mess;
+                                    ?>
+                                    <div class="alert alert-danger">
+                                        <button type="button" class="close" data-dismiss="alert">                                   
+                                            <i class="icon-remove"></i>                                </button>
+                                        <i class="icon-warning-sign"></i> <?php echo $strr; ?>
+                                    </div>
+                            <?php } ?>
+                            
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- END LISTING -->
+                <?php
+                if ($this->acl->is_allowed(array('offerings')))
+                {
+                        ?>
+                       <!--END TABLES-->
+                <?php } ?>
+               
 
                 <!-- end: PAGE CONTENT-->
             </div>
@@ -1558,12 +1107,7 @@
      
     });
     </script>
-    <?=core_js("core/js/plugins/editors/wysihtml5/wysihtml5.min.js");?>
-    <?=core_js("core/js/plugins/editors/wysihtml5/toolbar.js");?>
-    <?=core_js("core/js/plugins/editors/wysihtml5/parsers.js");?>
 
-    <?=core_js("core/js/plugins/editors/wysihtml5/locales/bootstrap-wysihtml5.ua-UA.js");?>
-   <?=core_js("core/js/pages/editor_wysihtml5.js");?> 
    <!-- wysihtml5 wysihtml5-min  -->
    <?=core_js("core/js/plugins/printThis/printThis.js");?>
    <?=core_js("core/js/plugins/printThis/printer.js");?>

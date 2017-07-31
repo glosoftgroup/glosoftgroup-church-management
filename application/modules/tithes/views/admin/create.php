@@ -65,17 +65,15 @@
                             <th width="20%">     Type  </th>
                         </tr>
                     </thead>
-                </table>
-                <div id="entry1" class="clonedInput">	
-                    <table class="table table-striped table-bordered table-hover" >
+                
                         <tbody>
-                            <tr>
+                            <tr id="entry1" class="clonedInput">
                                 <td width="3%">
                                     <span id="reference" name="reference" class="heading-reference">1</span>
                                 </td>
                                 <td width="20%">
                                      <?php
-                                         echo form_dropdown('member[]', array('' => 'Select Member') + $members + array('Church Tithe' => 'Church Tithe', 'Others Tithe' => 'Others Tithe'), (isset($result->member)) ? $result->member : '', ' id="member" class="member select" data-placeholder="Select Options..." ');
+                                         echo form_dropdown('member[]', array('' => 'Select Member') + $members + array('Church Tithe' => 'Church Tithe', 'Others Tithe' => 'Others Tithe'), (isset($result->member)) ? $result->member : '', ' id="member" class="member form-control" data-placeholder="Select Options..." ');
                                      ?> <i style="color:red"><?php echo form_error('member'); ?></i>
                                 </td>
                                 <td width="20%"> 
@@ -85,7 +83,7 @@
                                 <td width="20%">
                                      <?php
                                          $items = array('Cash' => 'Cash', 'Cheque' => 'Cheque', 'Bank Slip' => 'Bank Slip', 'M-Pesa' => 'M-Pesa');
-                                         echo form_dropdown('type[]', $items, (isset($result->type)) ? $result->type : '', ' id="type" class="type select" data-placeholder="Select Options..." ');
+                                         echo form_dropdown('type[]', $items, (isset($result->type)) ? $result->type : '', ' id="type" class="type form-control" data-placeholder="Select Options..." ');
                                      ?> <i style="color:red"><?php echo form_error('type'); ?></i>
                                 </td>
                             </tr>
@@ -112,7 +110,7 @@
 <script>
      $(function ()
      {
-          $('.select').select2({'width': '100%'});
+          //$('.select').select2({'width': '100%'});
           $('#btnAdd').click(function ()
           {
                //$('input.timepicker').eq(0).clone().removeClass("hasTimepicker").prependTo('#entry2');
@@ -130,7 +128,7 @@
                $('#entry' + num).after(newElem);
                /********************BEGIN SELECT2 CLONE*******************************/
                newElem.find('.select2-container').remove();
-               newElem.find('select').select2({'width': '100%'});
+               newElem.find('select').addClass('form-control');
                /********************END SELECT2 CLONE*******************************/
                // enable the "remove" button
                $('#btnDel').attr('disabled', false);
