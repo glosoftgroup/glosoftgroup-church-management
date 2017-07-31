@@ -1,4 +1,4 @@
-    
+	
 <?php
     $counties = array(
             '' => 'Select County',
@@ -538,7 +538,7 @@
                             </div>
                         </div>
 
-                    </div>                      
+                    </div>						
                     <div class="form-group">
                         <div class="col-sm-2 col-sm-offset-8">
                             <a class="btn btn-primary next-step btn-block">
@@ -585,7 +585,7 @@
                     </div>
 
                     <div class='form-group'>
-                        <label class='col-sm-3 control-label'>Confirmed <span class='required'>*</span></label> 
+                        <label class='col-sm-3 control-label'>Confirmed <span class='required'>*</span></label>	
                         <div class="col-sm-5">
                              <?php
                                  $items = array('' => '',
@@ -781,7 +781,7 @@
 
 
                     <div class='form-group'>
-                        <label class='col-sm-3 control-label'>Ministries Interested in </label> 
+                        <label class='col-sm-3 control-label'>Ministries Interested in </label>	
                         <div class="col-sm-5">
                              <?php
                                 echo form_dropdown('ministries[]', $ministries, (isset($result->ministries)) ? $result->ministries : '', ' id="form-field-select-4" multiple="multiple" class="form-control select" data-placeholder="Select Options..." ');
@@ -790,7 +790,7 @@
 
                     </div>
                     <div class='form-group'>
-                        <label class='col-sm-3 control-label'>Member HBC </label>   
+                        <label class='col-sm-3 control-label'>Member HBC </label>	
                         <div class="col-sm-5">
                              <?php
                                 echo form_dropdown('hbc_id', $hbcs, (isset($result->hbc_id)) ? $result->hbc_id : '', ' id="confirmed_" class="form-control select" data-placeholder="Select Options..." ');

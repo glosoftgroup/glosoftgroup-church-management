@@ -15,30 +15,10 @@
         <link rel="stylesheet" href="<?php echo plugin_path('font-awesome/css/font-awesome.min.css'); ?>" >
         
         <?php echo theme_css('fonts/style.css'); ?>
-        
         <?php echo core_css('core/css/bootstrap.css'); ?>
         <?php echo core_css('core/css/core.css'); ?>
         <?php echo core_css('core/css/components.css'); ?>
         <?php echo core_css('core/css/colors.css'); ?>
-        <?php echo theme_css('church.css'); ?>
-        <link rel="stylesheet" href="<?php echo plugin_path('bootstrap-modal/css/bootstrap-modal-bs3patch.css'); ?>" >
-      <link rel="stylesheet" href="<?php echo plugin_path('bootstrap-modal/css/bootstrap-modal.css'); ?>" >
-
-     <link rel="stylesheet" href="<?php echo plugin_path('bootstrap-fileupload/bootstrap-fileupload.min.css'); ?>" >
-
-     <!-- datatabels -->
-     <link rel="stylesheet" href="<?php echo plugin_path('DataTables/media/css/DT_bootstrap.css'); ?>" >   
-    <link href="<?php echo plugin_path('jeditable/bootstrap-editable.css'); ?>" rel="stylesheet">
-
-
-    <link href="<?php echo plugin_path('jquery-ui/jquery-ui-1.10.1.custom.min.css'); ?>" rel="stylesheet"/>
-    <link rel="stylesheet" href="<?php echo plugin_path('dynatree/src/skin-vista/ui.dynatree.css'); ?>">
-         <link rel="stylesheet" href="<?php echo plugin_path('iCheck/skins/all.css'); ?>" >
-          <?php echo theme_css('jquery.dataTables.css'); ?>
-        <?php echo theme_css('tableTools.css'); ?>
-        <?php echo theme_css('dataTables.colVis.min.css'); ?>
-        <?= theme_css('custom.css'); ?>
-        <link rel="stylesheet" href="<?php echo plugin_path('select2/select2.css'); ?>" >
         <?=core_css("core/css/extras/animate.min.css");?>
         <style>.error { color:red; }</style>
           <!-- /global stylesheets -->
@@ -50,13 +30,7 @@
         <!-- Core JS files -->
         <?php echo core_js('core/js/plugins/loaders/pace.min.js'); ?>
         <?php echo core_js('core/js/core/libraries/jquery.min.js'); ?>
-         <script src=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js "></script>
-        <script src="http://code.jquery.com/jquery-migrate-1.4.1.js"></script>
-        <?=core_js("core/js/plugins/forms/selects/bootstrap_select.min.js");?>
-        <?=core_js('core/js/plugins/forms/selects/selectboxit.min.js');?>
-       <script src="<?php echo plugin_path('select2/select2.min.js'); ?>"></script>
-       <script src="<?php echo plugin_path('autosize/jquery.autosize.min.js'); ?>"></script>
-        <script src="http://cdn.jsdelivr.net/jquery.sparkline/2.1.2/jquery.sparkline.min.js"></script>
+       
         <?php echo core_js('core/js/core/libraries/bootstrap.min.js'); ?>
         <?php echo core_js('core/js/plugins/loaders/blockui.min.js'); ?>
 
@@ -64,15 +38,16 @@
         <!-- Theme JS files -->
         <?php echo core_js('core/js/plugins/ui/nicescroll.min.js'); ?>
         <?php echo core_js('core/js/core/app.js'); ?>
-       
+        <?php echo core_js('core/js/plugins/forms/selects/select2.min.js'); ?>
+        <?=core_js('core/js/plugins/forms/wizards/stepy.min.js');?>
+        <?=core_js('core/js/plugins/forms/styling/uniform.min.js');?>
+        <?=core_js('core/js/core/libraries/jasny_bootstrap.min.js');?>
+        <?=core_js('core/js/plugins/forms/validation/validate.min.js');?>
+        <?=core_js('core/js/pages/wizard_stepy.js');?>
         <?php echo core_js('core/js/pages/layout_fixed_custom.js'); ?>
         <?php echo core_js('core/js/plugins/ui/ripple.min.js'); ?>
         <!-- /theme JS files -->
-
-
-        <!-- datatables -->
-        <?php echo core_js('core/js/plugins/tables/datatables/datatables.min.js'); ?>
-        <?php echo core_js('core/js/pages/datatables_advanced.js'); ?>
+       
         <!-- ./datatables -->
 
         <!-- theme scripts -->
@@ -90,21 +65,14 @@
         <!-- old files -->
 
        <!-- echo theme_css('sett.css'); ?> -->
-        <?php echo theme_css('jquery.dataTables.css'); ?>
-        <?php echo theme_css('tableTools.css'); ?>
-        <?php echo theme_css('dataTables.colVis.min.css'); ?>
-
-
-          <!-- echo theme_css('select2/select2.css'); -->
-        <link href="<?php echo js_path('plugins/jeditable/bootstrap-editable.css'); ?>" rel="stylesheet">
+       
 
        
         <!-- limit calender -->
        <?php echo core_js('core/js/plugins/ui/moment/moment.min.js'); ?>
        <?php echo core_js('core/js/plugins/ui/fullcalendar/fullcalendar.min.js'); ?>
        <?php echo core_js('core/js/plugins/visualization/echarts/echarts.js'); ?>
-      
-      </script>
+     
         
         <link rel="shortcut icon" type="image/ico" href="<?php echo image_path('favicon.ico'); ?>" />
     </head>
@@ -236,110 +204,8 @@
      <!-- /page content -->
     </div>
     <!-- /page container -->
-    <!-- scripts -->
-    
-    <?=core_js('core/js/plugins/forms/styling/uniform.min.js');?>
-    <?php echo core_js('core/js/plugins/ui/moment/moment.min.js'); ?>
-    <?php echo core_js('core/js/plugins/ui/fullcalendar/fullcalendar.min.js'); ?>
-    <?php echo core_js('core/js/plugins/visualization/echarts/echarts.js'); ?>
-    <?php echo core_js('core/js/plugins/forms/selects/bootstrap_multiselect.js'); ?>
-    
-    
-    <style>
-    .uppercase {
-    font-family: sans-serif;
-    line-height: 250%;
-    word-spacing: 3px;
-    font-size: 1.3em;
-}
-
-</style>
-
-<script src=" <?php echo plugin_path('blockUI/jquery.blockUI.js'); ?>"></script>
-    <script src=" <?php echo plugin_path('iCheck/jquery.icheck.min.js'); ?>"></script>
-    <script src="<?php echo plugin_path('perfect-scrollbar/src/jquery.mousewheel.js'); ?>"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.7.0/css/perfect-scrollbar.css">
-    <script src="<?php echo plugin_path('perfect-scrollbar/src/perfect-scrollbar.js'); ?>"></script>
    
-    <?php echo theme_js('main.js'); ?> 
-    <script src="<?php echo plugin_path('jquery-inputlimiter/jquery.inputlimiter.1.3.1.min.js'); ?>"></script>
-    
-    
-    <script src="<?php echo plugin_path('jquery.maskedinput/src/jquery.maskedinput.js'); ?>"></script>
-    <script src="<?php echo plugin_path('bootstrap-datepicker/js/bootstrap-datepicker.js'); ?>"></script>
-    <script src="<?php echo plugin_path('bootstrap-timepicker/js/bootstrap-timepicker.min.js'); ?>"></script>
-    <script src="<?php echo plugin_path('bootstrap-daterangepicker/moment.min.js'); ?>"></script>
-    <script src="<?php echo plugin_path('bootstrap-daterangepicker/daterangepicker.js'); ?>"></script>
 
-    <script src="<?php echo plugin_path('jQuery-Tags-Input/jquery.tagsinput.js'); ?>"></script>
-    <script src="<?php echo plugin_path('bootstrap-fileupload/bootstrap-fileupload.min.js'); ?>"></script>
-    <script src="<?php echo plugin_path('summernote/build/summernote.min.js'); ?>"></script>
-    <script src="<?php echo plugin_path('ckeditor/ckeditor.js'); ?>"></script>
-    <script src="<?php echo plugin_path('ckeditor/adapters/jquery.js'); ?>"></script>
-    <script src="<?php echo plugin_path('jeditable/bootstrap-editable.min.js'); ?>"></script>
-    <?php echo theme_js('form-elements.js'); ?> 
 
-    <!-- Form and Form Wizard JS -->
-    <script src="<?php echo plugin_path('jquery-validation/dist/jquery.validate.min.js'); ?>"></script>  
-    <script src="<?php echo plugin_path('jQuery-Smart-Wizard/js/jquery.smartWizard.js'); ?>"></script>  
-    <?php echo theme_js('form-wizard.js'); ?> 
-    
-    <?php echo theme_js('table-data.js'); ?> 
-
-    <!--  MODAL JS  -->
-    <script src="<?php echo plugin_path('bootstrap-modal/js/bootstrap-modal.js'); ?>"></script>  
-    <script src="<?php echo plugin_path('bootstrap-modal/js/bootstrap-modalmanager.js'); ?>"></script>  
-    <?php echo theme_js('ui-modals.js'); ?>
-    
-    <!-- table export -->
-    <script src="<?php echo plugin_path('tableExport/tableExport.js'); ?>"></script>  
-    <script src="<?php echo plugin_path('tableExport/jquery.base64.js'); ?>"></script>  
-    <script src="<?php echo plugin_path('tableExport/html2canvas.js'); ?>"></script>  
-    <script src="<?php echo plugin_path('tableExport/jquery.base64.js'); ?>"></script>  
-    <script src="<?php echo plugin_path('tableExport/jspdf/libs/sprintf.js'); ?>"></script>  
-    <script src="<?php echo plugin_path('tableExport/jspdf/jspdf.js'); ?>"></script>  
-    <script src="<?php echo plugin_path('tableExport/jspdf/libs/base64.js'); ?>"></script>  
-    <?php echo theme_js('table-export.js'); ?> 
-    <!-- end table export -->
-    <script src="<?php echo plugin_path('DataTables/media/js/jquery.dataTables.min.js'); ?>"></script>  
-    <script src="<?php echo plugin_path('DataTables/media/js/DT_bootstrap.js'); ?>"></script> 
-    
-    <?=core_js("core/js/pages/form_bootstrap_select.js");?>
-    <?php echo theme_js('table-data.js'); ?> 
-
-    <script>
-            jQuery(document).ready(function () {
-                Main.init();
-                FormElements.init();
-                FormWizard.init();
-                TableData.init();
-                UIModals.init();
-                TableExport.init();
-            });
-    </script>
-     <script>
-      // Basic select
-    //$('.search-select').selectpicker();
-
-     // Default initialization
-     // $('.select').select2({
-     //     minimumResultsForSearch: Infinity
-     // });
-
-     
-     $('.multiselect').multiselect({
-        onChange: function() {
-            $.uniform.update();
-        }
-    });
-    $(".date-picker").datepicker({
-      format: "dd/mm/yyyy",
-     
-    });
-    </script>
-    <script type="text/javascript">
-          $(".selectbox").selectBoxIt({
-        autoWidth: false
-    });
     </body>
 </html>

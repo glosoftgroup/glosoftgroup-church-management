@@ -144,7 +144,7 @@
                    // the information has therefore been successfully saved in the db
                    if ($done)
                    {
-                        $this->sync->log_update('take_stock', $id, $form_data);
+                        //$this->sync->log_update('take_stock', $id, $form_data);
                         $this->session->set_flashdata('message', array('type' => 'success', 'text' => 'Take Stock ' . lang('web_edit_success')));
                         redirect("admin/take_stock/");
                    }

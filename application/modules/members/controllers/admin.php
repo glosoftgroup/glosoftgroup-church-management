@@ -550,7 +550,10 @@
                    $data['hbcs'] = $this->members_m->populate('hbcs', 'id', 'name');
 
                    //load the view and the layout
-                   $this->template->title('Add Members ')->build('admin/create', $data);
+                   $this->template->title('Add Members ')
+                        ->set_layout('wizard')
+                        ->build('admin/create', $data);
+
               }
          }
 

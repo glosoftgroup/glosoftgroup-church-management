@@ -219,7 +219,7 @@
                    // the information has therefore been successfully saved in the db
                    if ($done)
                    {
-                        $this->sync->log_update('salaries', $id, $form_data);
+                        //$this->sync->log_update('salaries', $id, $form_data);
                         /*                         * INSERT DEDUCTIONS*** */
                         $deducs = array();
                         $deducs = $this->input->post('deductions');

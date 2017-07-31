@@ -25,7 +25,7 @@
                 <label class=' col-sm-3 control-label' for='date'>Date <span class='required'>*</span></label>
                 <div class="col-sm-5 input-group">
 
-                    <input id='date' type='text' name='date' maxlength='' class='form-control date-picker' value="<?php echo set_value('date', $result->date > 0 ? date('d M Y', $result->date) : $result->date); ?>"  />
+                    <input id='date' type='text' name='date' maxlength='' class='form-control date-picker' value="<?php echo set_value('date', $result->date);?>"  />
                     <i style="color:red"><?php echo form_error('date'); ?></i>
                     <span class="input-group-addon"> <i class="icon-calendar"></i> </span>
 

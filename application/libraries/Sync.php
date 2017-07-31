@@ -11,8 +11,7 @@
          {
               $this->ci = & get_instance();
               $this->ci->load->model('log_m');
-              $this->ci->load->library('ion_auth');
-              $this->user = $this->ci->ion_auth->get_user();
+              
               
               
          }

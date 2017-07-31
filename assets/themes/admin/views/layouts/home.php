@@ -59,6 +59,12 @@
         <!-- Updated stylesheet url -->
         <?=core_js("core/js/core/libraries/jquery_ui/widgets.min.js");?>
         <?=core_js("core/js/pages/animations_css3.js");?>
+        <script src="<?php echo plugin_path('jquery.sparkline/jquery.sparkline.js'); ?>"></script>
+        <script src="<?php echo plugin_path('flot/jquery.flot.js'); ?>"></script>
+    <script src="<?php echo plugin_path('flot/jquery.flot.pie.js'); ?>"></script>
+    <script src="<?php echo plugin_path('flot/jquery.flot.resize.min.js'); ?>"></script>
+    <?php echo core_js('core/js/plugins/ui/moment/moment.min.js'); ?>
+    <?php echo core_js('core/js/plugins/ui/fullcalendar/fullcalendar.min.js'); ?>
         
         <!-- ./theme scripts -->
 
@@ -74,11 +80,7 @@
         <link href="<?php echo js_path('plugins/jeditable/bootstrap-editable.css'); ?>" rel="stylesheet">
 
        
-        <!-- limit calender -->
-       <?php echo core_js('core/js/plugins/ui/moment/moment.min.js'); ?>
-       <?php echo core_js('core/js/plugins/ui/fullcalendar/fullcalendar.min.js'); ?>
-       <?php echo core_js('core/js/plugins/visualization/echarts/echarts.js'); ?>
-       <?=core_js('plugins/forms/styling/uniform.min.js');?>
+       
      
         
         <link rel="shortcut icon" type="image/ico" href="<?php echo image_path('favicon.ico'); ?>" />
@@ -364,7 +366,7 @@
                                     </div>
                                     <div class="panel-body">
                                         <div class="flot-medium-container">
-                                            <div id="placeholder-h1" class="flot-placeholder"></div>
+                                            <div id="placeholder-h1" style="height:300px;" class="flot-placeholder"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -779,7 +781,7 @@
             <br>
             <span class="text-muted">
             <?php foreach ($tithes as $p)
-                {  echo $p->amount . ',';} ?>
+                {  echo $p->totals . ',';} ?>
             </span>         
         </div>
           </a>
@@ -796,7 +798,7 @@
             <br>
             <span class="text-muted">
             <?php foreach ($thanks as $p)
-                {  echo $p->amount . ',';} ?>
+                {  echo $p->totals . ',';} ?>
             </span>         
         </div>
           </a>
@@ -1112,20 +1114,15 @@
    <?=core_js("core/js/plugins/printThis/printThis.js");?>
    <?=core_js("core/js/plugins/printThis/printer.js");?>
    <script src="<?php echo plugin_path('perfect-scrollbar/src/jquery.mousewheel.js'); ?>"></script>
-    <script src="<?php echo plugin_path('perfect-scrollbar/src/perfect-scrollbar.js'); ?>"></script>
-    
-    
-    <style>
-    .uppercase {
-    font-family: sans-serif;
-    line-height: 250%;
-    word-spacing: 3px;
-    font-size: 1.3em;
-}
+   <script src="<?php echo plugin_path('perfect-scrollbar/src/perfect-scrollbar.js'); ?>"></script>
+   
+    <!-- limit calender -->
+   <?php echo core_js('core/js/plugins/ui/moment/moment.min.js'); ?>   
+   <?php echo core_js('core/js/plugins/visualization/echarts/echarts.js'); ?>
+   <?=core_js('core/js/plugins/forms/styling/uniform.min.js');?>
+   
 
-</style>
-
-<!-- theme js -->
+    <!-- theme js -->
     <script src=" <?php echo plugin_path('iCheck/jquery.icheck.min.js'); ?>"></script>
     <script src="<?php echo plugin_path('perfect-scrollbar/src/jquery.mousewheel.js'); ?>"></script>
     <script src="<?php echo plugin_path('perfect-scrollbar/src/perfect-scrollbar.js'); ?>"></script>
@@ -1134,13 +1131,11 @@
 
     <!-- end: MAIN JAVASCRIPTS -->
     <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-    <script src="<?php echo plugin_path('flot/jquery.flot.js'); ?>"></script>
-    <script src="<?php echo plugin_path('flot/jquery.flot.pie.js'); ?>"></script>
-    <script src="<?php echo plugin_path('flot/jquery.flot.resize.min.js'); ?>"></script>
-    <script src="<?php echo plugin_path('jquery.sparkline/jquery.sparkline.js'); ?>"></script>
+    
+    
     <script src="<?php echo plugin_path('jquery-easy-pie-chart/jquery.easy-pie-chart.js'); ?>"></script>
     <script src="<?php echo plugin_path('jquery-ui-touch-punch/jquery.ui.touch-punch.min.js'); ?>"></script>
-    <script src="<?php echo plugin_path('fullcalendar/fullcalendar/fullcalendar.js'); ?>"></script>
+    <!-- <script src="<?php echo plugin_path('fullcalendar/fullcalendar/fullcalendar.js'); ?>"></script> -->
     <?php echo theme_js('index.js'); ?> 
 
     <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
@@ -1442,10 +1437,7 @@ if ($this->acl->is_allowed(array('offerings')))
                     var y = date.getFullYear();
                     var form = '';
                     var calendar = $('#calendar').fullCalendar({
-                        buttonText: {
-                            prev: '<i class="icon-chevron-left"></i>',
-                            next: '<i class="icon-chevron-right"></i>'
-                        },
+                        
                         header: {
                             left: 'prev,next today',
                             center: 'title',
