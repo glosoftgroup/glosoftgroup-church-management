@@ -141,6 +141,77 @@
 
                 <!-- Content area -->
                 <div class="content">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="panel-body">
+
+                            <?php
+                            if ($this->session->flashdata('warning'))
+                            {
+                                    ?>
+                                    <div class="alert">
+                                        <button type="button" class="close" data-dismiss="alert">                                    
+                                            <i class="icon-remove"></i>                                </button>
+                                        <strong>Warning!</strong> <?php echo $this->session->flashdata('warning'); ?>
+                                    </div>
+                            <?php } ?> 
+                            <?php
+                            if ($this->session->flashdata('warning'))
+                            {
+                                    ?>
+                                    <div class="alert">
+                                        <button type="button" class="close" data-dismiss="alert">                                    
+                                            <i class="icon-remove"></i>                                </button>
+                                        <strong>Warning!</strong> <?php echo $this->session->flashdata('warning'); ?>
+                                    </div>
+                            <?php } ?>
+                            <?php
+                            if ($this->session->flashdata('success'))
+                            {
+                                    ?>
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert">  <i class="icon-remove"></i>  </button>
+                                        <?php echo $this->session->flashdata('success'); ?>
+                                    </div>
+                            <?php } ?>
+                            <?php
+                            if ($this->session->flashdata('info'))
+                            {
+                                    ?>
+                                    <div class="alert alert-info">
+                                        <button type="button" class="close" data-dismiss="alert">                                    
+                                            <i class="icon-remove"></i>                                </button>
+                                        <?php echo $this->session->flashdata('info'); ?>
+                                    </div>
+                            <?php } ?>
+                            <?php
+                            if ($this->session->flashdata('message'))
+                            {
+                                    $message = $this->session->flashdata('message');
+                                    $str = is_array($message) ? $message['text'] : $message;
+                                    ?>
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert">                                   
+                                            <i class="icon-remove"></i>                                </button>
+                                        <i class="icon-thumbs-up"></i> <?php echo $str; //$this->session->flashdata('message');      ?>
+                                    </div>
+                            <?php } ?>
+                            <?php
+                            if ($this->session->flashdata('error'))
+                            {
+                                    $mess = $this->session->flashdata('error');
+                                    $strr = is_array($mess) ? $mess['text'] : $mess;
+                                    ?>
+                                    <div class="alert alert-danger">
+                                        <button type="button" class="close" data-dismiss="alert">                                   
+                                            <i class="icon-remove"></i>                                </button>
+                                        <i class="icon-warning-sign"></i> <?php echo $strr; ?>
+                                    </div>
+                            <?php } ?>
+                            
+                        </div>
+                    </div>
+                </div>
 
                     <!-- Detached content -->
                     <div class="container-detached">
@@ -962,77 +1033,7 @@
             <div class="container">
                 
                 <!-- start: PAGE CONTENT -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="panel-body">
-
-                            <?php
-                            if ($this->session->flashdata('warning'))
-                            {
-                                    ?>
-                                    <div class="alert">
-                                        <button type="button" class="close" data-dismiss="alert">                                    
-                                            <i class="icon-remove"></i>                                </button>
-                                        <strong>Warning!</strong> <?php echo $this->session->flashdata('warning'); ?>
-                                    </div>
-                            <?php } ?> 
-                            <?php
-                            if ($this->session->flashdata('warning'))
-                            {
-                                    ?>
-                                    <div class="alert">
-                                        <button type="button" class="close" data-dismiss="alert">                                    
-                                            <i class="icon-remove"></i>                                </button>
-                                        <strong>Warning!</strong> <?php echo $this->session->flashdata('warning'); ?>
-                                    </div>
-                            <?php } ?>
-                            <?php
-                            if ($this->session->flashdata('success'))
-                            {
-                                    ?>
-                                    <div class="alert alert-success">
-                                        <button type="button" class="close" data-dismiss="alert">  <i class="icon-remove"></i>  </button>
-                                        <?php echo $this->session->flashdata('success'); ?>
-                                    </div>
-                            <?php } ?>
-                            <?php
-                            if ($this->session->flashdata('info'))
-                            {
-                                    ?>
-                                    <div class="alert alert-info">
-                                        <button type="button" class="close" data-dismiss="alert">                                    
-                                            <i class="icon-remove"></i>                                </button>
-                                        <?php echo $this->session->flashdata('info'); ?>
-                                    </div>
-                            <?php } ?>
-                            <?php
-                            if ($this->session->flashdata('message'))
-                            {
-                                    $message = $this->session->flashdata('message');
-                                    $str = is_array($message) ? $message['text'] : $message;
-                                    ?>
-                                    <div class="alert alert-success">
-                                        <button type="button" class="close" data-dismiss="alert">                                   
-                                            <i class="icon-remove"></i>                                </button>
-                                        <i class="icon-thumbs-up"></i> <?php echo $str; //$this->session->flashdata('message');      ?>
-                                    </div>
-                            <?php } ?>
-                            <?php
-                            if ($this->session->flashdata('error'))
-                            {
-                                    $mess = $this->session->flashdata('error');
-                                    $strr = is_array($mess) ? $mess['text'] : $mess;
-                                    ?>
-                                    <div class="alert alert-danger">
-                                        <button type="button" class="close" data-dismiss="alert">                                   
-                                            <i class="icon-remove"></i>                                </button>
-                                        <i class="icon-warning-sign"></i> <?php echo $strr; ?>
-                                    </div>
-                            <?php } ?>
-                            
-                        </div>
-                    </div>
-                </div>
+                
                
                 <!-- END LISTING -->
                 <?php

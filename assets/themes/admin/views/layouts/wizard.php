@@ -70,8 +70,14 @@
        
         <!-- limit calender -->
        <?php echo core_js('core/js/plugins/ui/moment/moment.min.js'); ?>
-       <?php echo core_js('core/js/plugins/ui/fullcalendar/fullcalendar.min.js'); ?>
-       <?php echo core_js('core/js/plugins/visualization/echarts/echarts.js'); ?>
+       <script src="<?php echo plugin_path('jquery.maskedinput/src/jquery.maskedinput.js'); ?>"></script>
+    <script src="<?php echo plugin_path('bootstrap-datepicker/js/bootstrap-datepicker.js'); ?>"></script>
+    <script src="<?php echo plugin_path('bootstrap-timepicker/js/bootstrap-timepicker.min.js'); ?>"></script>
+    <script src="<?php echo plugin_path('bootstrap-daterangepicker/moment.min.js'); ?>"></script>
+    <script src="<?php echo plugin_path('bootstrap-daterangepicker/daterangepicker.js'); ?>"></script>
+
+    <script src="<?php echo plugin_path('jQuery-Tags-Input/jquery.tagsinput.js'); ?>"></script>
+    <script src="<?php echo plugin_path('bootstrap-fileupload/bootstrap-fileupload.min.js'); ?>"></script>
      
         
         <link rel="shortcut icon" type="image/ico" href="<?php echo image_path('favicon.ico'); ?>" />
@@ -163,6 +169,86 @@
             <!-- /.modal -->
             <!-- end: SPANEL CONFIGURATION MODAL FORM -->
           <div class="row">
+          <div>
+                    <h1> <?php echo anchor('admin/' . $this->uri->segment(2), humanize($this->uri->segment(2))); ?>
+                                <small><?php echo $template['title']; ?></small>
+                            </h1>
+                        </div>
+                        <!-- end: PAGE TITLE & BREADCRUMB -->
+                    </div>
+                </div>
+                <!-- end: PAGE HEADER -->
+                <!-- start: PAGE CONTENT -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel-body">
+
+                            <?php
+                            if ($this->session->flashdata('warning'))
+                            {
+                                    ?>
+                                    <div class="alert">
+                                        <button type="button" class="close" data-dismiss="alert">                                    
+                                            <i class="icon-remove"></i>                                </button>
+                                        <strong>Warning!</strong> <?php echo $this->session->flashdata('warning'); ?>
+                                    </div>
+                            <?php } ?> 
+                            <?php
+                            if ($this->session->flashdata('warning'))
+                            {
+                                    ?>
+                                    <div class="alert">
+                                        <button type="button" class="close" data-dismiss="alert">                                    
+                                            <i class="icon-remove"></i>                                </button>
+                                        <strong>Warning!</strong> <?php echo $this->session->flashdata('warning'); ?>
+                                    </div>
+                            <?php } ?>
+                            <?php
+                            if ($this->session->flashdata('success'))
+                            {
+                                    ?>
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert">  <i class="icon-remove"></i>  </button>
+                                        <?php echo $this->session->flashdata('success'); ?>
+                                    </div>
+                            <?php } ?>
+                            <?php
+                            if ($this->session->flashdata('info'))
+                            {
+                                    ?>
+                                    <div class="alert alert-info">
+                                        <button type="button" class="close" data-dismiss="alert">                                    
+                                            <i class="icon-remove"></i>                                </button>
+                                        <?php echo $this->session->flashdata('info'); ?>
+                                    </div>
+                            <?php } ?>
+                            <?php
+                            if ($this->session->flashdata('message'))
+                            {
+                                    $message = $this->session->flashdata('message');
+                                    $str = is_array($message) ? $message['text'] : $message;
+                                    ?>
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert">                                   
+                                            <i class="icon-remove"></i>                                </button>
+                                        <i class="icon-thumbs-up"></i> <?php echo $str; //$this->session->flashdata('message');       ?>
+                                    </div>
+                            <?php } ?>
+                            <?php
+                            if ($this->session->flashdata('error'))
+                            {
+                                    $mess = $this->session->flashdata('error');
+                                    $strr = is_array($mess) ? $mess['text'] : $mess;
+                                    ?>
+                                    <div class="alert alert-danger">
+                                        <button type="button" class="close" data-dismiss="alert">                                   
+                                            <i class="icon-remove"></i>                                </button>
+                                        <i class="icon-warning-sign"></i> <?php echo $strr; ?>
+                                    </div>
+                            <?php } ?>
+
+                            <?php echo $template['body']; ?>
+          </div>
           <?php echo $template['body']; ?>
           </div>
 
@@ -204,7 +290,12 @@
      <!-- /page content -->
     </div>
     <!-- /page container -->
-   
+    <script type="text/javascript">
+        $(".date-picker").datepicker({
+      format: "mm/dd/yyyy",
+     
+    });
+    </script> 
 
 
     </body>

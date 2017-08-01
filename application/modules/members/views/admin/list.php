@@ -1,3 +1,7 @@
+<?=core_js('core/js/plugins/tables/datatables/datatables.min.js');?>
+
+<?=core_js('core/js/pages/datatables_sorting.js');?> 
+
 <div class="col-sm-12">
     <div class="panel panel-default animated fadeIn"> 
         <div class="panel-heading">
@@ -16,14 +20,14 @@
             </div>
         </div>             
         <div class="panel-body" style="display: block;">   
-            <div class="widget-main">
+            <div class="table-responsive widget-main">
 
 
                 <?php if ($members): ?>
-                         <div class='clearfix'></div>
+                        
 
 
-                         <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+                         <table class="table table-striped table-condensed table-bordered table-hover  table-full-width datatable-sorting" id="">
 
                              <thead>
                                  <tr>
